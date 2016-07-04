@@ -12,5 +12,10 @@ angular.module('starter.controllers', [])
   //});
 
   $scope.nombre = "Jose";
+  $scope.devList = [
+    { text: "HTML5", checked: true },
+    { text: "CSS3", checked: false },
+    { text: "JavaScript", checked: false }
+  ];
 })
 
