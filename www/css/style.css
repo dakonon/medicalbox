@@ -10,9 +10,25 @@ footer {
     position: absolute;
     font-size: 75%;
 }
+
 .medical-box {
   color: rgba(43, 155, 191, 0.66);
   font-weight: bold;
   font-family: 'Droid Serif', serif;
 }
 
+
+/********************
+ ***** EFFECTS ******
+********************/
+div {
+    opacity: 0;
+    -webkit-transition: opacity 1s ease-in;
+    -moz-transition: opacity 1s ease-in;
+    -o-transition: opacity 1s ease-in;
+    -ms-transition: opacity 1s ease-in;
+    transition: opacity 1s ease-in;
+}
+div.load {
+    opacity: 1;
+}
