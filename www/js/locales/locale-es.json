@@ -1,0 +1,160 @@
+﻿{
+    "errors": {
+        "data": {
+        },
+        "http": {
+        }
+    },
+  "dash": {
+    "list": {
+      "registro": "Registrate",
+      "rif": "Rif",
+      "customer": "Cliente",
+      "action": "Accion",
+      "nuevo_cliente": "Nuevo Cliente",
+      "buscar": "Buscar",
+      "anterior": "Anterior",
+      "siguiente": "Siguiente",
+
+      "errors": {
+        "cliente":  "No hemos encontrado clientes",
+        "data": {
+        }
+      }
+    },
+    "details": {
+      "title": "Ficha Cliente",
+      "datos_empresa": "Datos de la Empresa",
+      "datos_administrativo": "Datos de Contacto Administrativo",
+      "datos_cliente": "Datos de Contacto Cliente",
+      "razon": "Razon Social",
+      "direccion": "Dirección",
+      "numero_fiscal": "N° Fiscal",
+      "pais": "Pais",
+      "estado": "Estado",
+      "ciudad": "Ciudad",
+      "nombre": "Nombre",
+      "apellido": "Apellido",
+      "email": "Email",
+      "telefono": "Telefono",
+      "celular": "Celular",
+      "proyecto": "Proyecto",
+      "tipo": "Tipo de Proyecto",
+      "nombre_proyecto": "Nombre",
+      "responsable": "Responsable del Proyecto",
+      "avance": "% de Avance de Obra",
+      "ordenes": "Ver Ordenes de Requisicion",
+      "accion": "Accion",
+      "guardar": "Guardar",
+      "nuevo_proyecto": "Nuevo Proyecto",
+      "anterior": "Anterior",
+      "siguiente": "Siguiente",
+      "ver": "Ver",
+      "errors": {
+          "razon": "Olvidaste introducir tu Razón Social...",
+          "direccion": "Olvidaste introducir tu Dirección...",
+          "numero_fiscal": "Olvidaste introducir tu N° Fiscal...",
+          "pais": "Olvidaste introducir tu Pais...",
+          "estado": "Olvidaste introducir tu Estado...",
+          "no_estado":  "No hemos encontrado Estados",
+          "ciudad": "Olvidaste introducir tu Ciudad...",
+          "no_ciudad": "No hemos encontrado Ciudades",
+          "nombre": "Olvidaste introducir tu Nombre...",
+          "apellido": "Olvidaste introducir tu Apellido...",
+          "email_requerido": "Olvidaste introducir tu Email...",
+          "email": "Por favor verifica tu direccion de email...",
+          "telefono": "Olvidaste introducir tu Telefono...",
+          "celular": "Olvidaste introducir tu Movil...",
+          "no_proyecto": "No hemos encontrado Proyectos",
+        "data": {
+        }
+      }
+    }
+  },   
+  "projects": {
+     "details": {
+        "title": "Ficha de Proyecto",
+        "tipo": "Tipo de Proyecto",
+        "proyecto": "Proyecto",
+        "responsable": "Responsable del Proyecto",
+        "cargo": "Cargo",
+        "telefono": "Telefono",
+        "email": "Email",
+        "avance": "% de Avance de Obra",
+        "guardar": "Guardar",
+        "errors": {
+          "tipo_proyecto": "Olvidaste introducir tu Tipo de Proyecto...",
+          "proyecto": "Olvidaste introducir tu Proyecto...",
+          "responsable": "Olvidaste introducir el Responsable...",
+          "cargo": "Olvidaste introducir el Cargo...",
+          "telefono": "Olvidaste introducir tu Telefono...",
+          "email_requerido": "Olvidaste introducir tu Email...",
+          "email": "Por favor verifica tu direccion de email...",  
+          "avance": "Olvidaste introducir tu % de Avance...",    
+        "data": {
+        }
+      }
+      }
+  },
+    "providers": {
+      "list": {
+        "title": "Ficha de Proveedor",
+        "rif": "Rif",
+        "provider": "Proveedor",
+        "action": "Accion",
+        "nuevo_proyecto": "Nuevo Proveedor",
+        "buscar": "Buscar",
+        "anterior": "Anterior",
+        "siguiente": "Siguiente",
+        "errors": {
+             "no_proveedores": "No hemos encontrado proveedores",
+          "data": {
+          }
+        }
+      },
+       "details": {
+          "title": "Ficha Proveedor",
+          "datos_empresa": "Datos de la Empresa",
+          "datos_administrativo": "Datos de Contacto Administrativo",
+          "datos_cliente": "Datos de Contacto Cliente",
+          "razon": "Razon Social",
+          "direccion": "Dirección",
+          "numero_fiscal": "N° Fiscal",
+          "pais": "Pais",
+          "estado": "Estado",
+          "ciudad": "Ciudad",
+          "nombre": "Nombre",
+          "apellido": "Apellido",
+          "email": "Email",
+          "telefono": "Telefono",
+          "celular": "Celular",
+          "proyecto": "Proyecto",
+          "tipo": "Tipo de Proyecto",
+          "nombre_proyecto": "Nombre",
+          "responsable": "Responsable del Proyecto",
+          "avance": "% de Avance de Obra",
+          "ordenes": "Ver Ordenes de Requisicion",
+          "accion": "Accion",
+          "guardar": "Guardar",
+          "errors": {
+              "razon": "Olvidaste introducir tu Razón Social...",
+              "direccion": "Olvidaste introducir tu Dirección...",
+              "numero_fiscal": "Olvidaste introducir tu N° Fiscal...",
+              "pais": "Olvidaste introducir tu Pais...",
+              "estado": "Olvidaste introducir tu Estado...",
+              "no_estado":  "No hemos encontrado Estados",
+              "ciudad": "Olvidaste introducir tu Ciudad...",
+              "no_ciudad": "No hemos encontrado Ciudades",
+              "nombre": "Olvidaste introducir tu Nombre...",
+              "apellido": "Olvidaste introducir tu Apellido...",
+              "email_requerido": "Olvidaste introducir tu Email...",
+              "email": "Por favor verifica tu direccion de email...",
+              "telefono": "Olvidaste introducir tu Telefono...",
+              "celular": "Olvidaste introducir tu Movil...",
+              "no_proyecto": "No hemos encontrado Proyectos",
+          "data": {
+          }
+        }
+        }
+    }
+}
