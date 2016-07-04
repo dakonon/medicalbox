@@ -1,1 +1,18 @@
-/* Empty. Add your own CSS if you like */
+body{
+  font-family: 'Open Sans' !important;
+  color: #636262;
+}
+footer {
+    background-color: #DDD;
+    width: 1000px; 
+    padding: 10px;
+    left: -2.5%;
+    position: absolute;
+    font-size: 75%;
+}
+.medical-box {
+  color: rgba(43, 155, 191, 0.66);
+  font-weight: bold;
+  font-family: 'Droid Serif', serif;
+}
+
