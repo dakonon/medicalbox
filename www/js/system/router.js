@@ -44,7 +44,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     url: '/dash',
     templateUrl: 'templates/tab-dash.html',
     controller: 'DashCtrl'
-    
   })
 
   .state('tab.chats', {
