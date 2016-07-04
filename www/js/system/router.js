@@ -42,12 +42,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
   .state('dash', {
     url: '/dash',
-    // views: {
-      // 'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
-      // }
-    // }
+    templateUrl: 'templates/tab-dash.html',
+    controller: 'DashCtrl'
+    
   })
 
   .state('tab.chats', {
@@ -81,8 +78,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   
    .state('signup', {
       url: '/signup',
-          templateUrl: 'templates/login/signup.html',
-        
+        templateUrl: 'templates/login/signup.html',
       }
     );
 
