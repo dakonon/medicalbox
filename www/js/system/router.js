@@ -34,8 +34,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
 
   .state('index', {
     url: '/index',
-    templateUrl: 'templates/tab-index.html',
-    controller: 'IndexCtrl'
+    templateUrl: 'templates/tab-index.html'
+    // controller: 'IndexCtrl'
   })
 
   .state('tab.chats', {
@@ -67,14 +67,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     }
   })
-  
- .state('signup', {
+  .state('signup', {
     url: '/signup',
       templateUrl: 'templates/login/signup.html',
+      controller: 'LoginCtrl'
+      
     }
   );
-  $urlRouterProvider.otherwise('index');
 
+  $urlRouterProvider.otherwise('index');
   $translateProvider.useStaticFilesLoader({
       prefix: 'js/locales/locale-',
       suffix: '.json'

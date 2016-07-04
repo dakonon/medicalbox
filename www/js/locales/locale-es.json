@@ -6,7 +6,7 @@
       "SIGNUP": "Registrate",
       "LOGIN": "Entrar"
     },
-    "CONTENT":{
+    "CONTENT": {
       "INFO": "<span class='medical-box'>MedicalBox</span> Busca el centro médico mas cercano, realiza tu cita, y listo!!! Una forma rápida de mantener la salúd.",
       "INFO_TWO": "Esta es la forma más fácil de hacer la busqueda de la clinica que necesites para hacer su chequeo médico regularmente. Además es completamente <span class='medical-box'>Gratis!!</span>",
       "INFO_THREE": "Solo necesitas registrarte como Paciente o Doctor (en el caso de que desees crear una clinica) y buscar en el mapa los centros clinicos mas cercanos según su posición al hacer click en <img src='img/icons/chrome_map.png' width='27px' />.",
@@ -18,5 +18,4 @@
       "INFO_FIVE": "Si necesita ayuda puede ver el <a href='' class='medical-box'>manual de usuario</a> o dirigirse a solicitarnos ayuda en info@medicalbox.com y les responderemos a la brevedad."
     }
   }
-
 }
