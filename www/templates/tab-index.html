@@ -9,9 +9,19 @@
         <h2><span class="medical-box">MedicalBox</span></h2>
       </div>
       <div class="col col-50 col-center">
-        <a ng-href="signup" class="button button-block button-calm" ui-sref="signup" translate="DASH.BUTTONS.SIGNUP" ></a>
-        <a class="button button-block button-positive" 
-          translate="DASH.BUTTONS.LOGIN" ></a>
+        <div class="slide-to-left">
+          <a ng-href="signup" class="button button-block button-calm" ui-sref="signup" translate="DASH.BUTTONS.SIGNUP" ></a>
+          <label class="item item-input">
+            <span class="input-label">Username</span>
+            <input type="text" ng-model="nombre">
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Password</span>
+            <input type="password">
+          </label>
+          <a class="button button-block button-positive" 
+            translate="DASH.BUTTONS.LOGIN" ></a>
+        </div>
       </div>
     </div>
     <div class="row row-center" >
