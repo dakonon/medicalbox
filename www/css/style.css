@@ -1,5 +1,8 @@
-/* Empty. Add your own CSS if you like */
-
+/*
+ *************************************
+ *            MAIN CSS               *
+ *************************************
+*/
 body{
   font-family: 'Open Sans' !important;
   color: #636262;
@@ -17,13 +20,31 @@ footer {
   color: rgba(43, 155, 191, 0.66);
   font-weight: bold;
   font-family: 'Droid Serif', serif;
+  /*font-size: 100%;*/
 }
 
+hr.hyphen{
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+    background: #999;
+}
+
+.little-text{
+  font-size: 70% !important;
+}
 /********************
  ***** EFFECTS ******
 ********************/
-.slide-to-left {
+.slide-to-left-slow {
   animation-duration: 3s;
+  animation-name: slidein;
+}
+.slide-to-left-middle {
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+.slide-to-left-fast {
+  animation-duration: 1s;
   animation-name: slidein;
 }
 
