@@ -1,0 +1,47 @@
+/* 
+********************
+* FIXING IONIC CSS *
+********************
+*/
+@media screen and (min-width: 100px) and (max-width: 260px) {
+  .input-label {
+    font-size: 10px;
+    display: initial;
+  }
+  span.input-label {
+    display: none;
+  }
+  .button {
+    font-size: 65% ;
+  }
+  .item-checkbox {
+    padding-left: 45px;
+    font-size: 10px ;
+    white-space: normal;
+  }
+  /*******NOT IONIC*********/
+  h2 .medical-box {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 260px) and (max-width: 440px) {
+  .input-label {
+    font-size: 10px;
+    display: initial;
+  }
+  span.input-label {
+    display: none;
+  }
+  .button {
+    font-size: 85%;
+  }
+  .item-checkbox {
+    padding-left: 45px;
+    font-size: 100%;
+    white-space: normal;
+  }
+  /*******NOT IONIC*********/
+  h2 .medical-box {
+    font-size: 60%;
+  }
+}

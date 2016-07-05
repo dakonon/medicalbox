@@ -2,26 +2,14 @@
   Created by: @pdonaire1
   Ing. Pablo Alejandro Gonzalez Donaire
 -->
-<ion-view view-title="Dashboard">
+<ion-view view-title="MedicalBox">
   <ion-content class="padding">
     <div class="row row-center" >
       <div class="col col-50 col-center">
         <h2><span class="medical-box">MedicalBox</span></h2>
       </div>
       <div class="col col-50 col-center">
-        <div class="slide-to-left">
-          <a ng-href="signup" class="button button-block button-calm" ui-sref="signup" translate="DASH.BUTTONS.SIGNUP" ></a>
-          <label class="item item-input">
-            <span class="input-label">Username</span>
-            <input type="text" ng-model="nombre">
-          </label>
-          <label class="item item-input">
-            <span class="input-label">Password</span>
-            <input type="password">
-          </label>
-          <a class="button button-block button-positive" 
-            translate="DASH.BUTTONS.LOGIN" ></a>
-        </div>
+        <ng-include src="'templates/login/_login_form.html'"></ng-include>
       </div>
     </div>
     <div class="row row-center" >
@@ -29,22 +17,22 @@
         <img src="/img/icons/hospital_big.png" width="100%" 
         style="max-width: 250px;" />
       </div>
-      <div class="col col-50 col-center" id="" translate="DASH.CONTENT.INFO">
+      <div class="col col-50 col-center" id="" translate="INDEX.CONTENT.INFO">
       </div>
     </div>
-    <p translate="DASH.CONTENT.INFO_TWO">
+    <p translate="INDEX.CONTENT.INFO_TWO">
     
     </p>
-    <p translate="DASH.CONTENT.INFO_THREE">
+    <p translate="INDEX.CONTENT.INFO_THREE">
       
     </p>
     <div class="row">
       <div class="col col-50 col-center">
         <ul>
-          <li class="medical-box" translate="DASH.CONTENT.OPTION_ONE"></li>
-          <li class="medical-box" translate="DASH.CONTENT.OPTION_TWO"></li>
-          <li class="medical-box" translate="DASH.CONTENT.OPTION_THREE"></li>
-          <li class="medical-box" translate="DASH.CONTENT.OPTION_FOUR"></li>
+          <li class="medical-box" translate="INDEX.CONTENT.OPTION_ONE"></li>
+          <li class="medical-box" translate="INDEX.CONTENT.OPTION_TWO"></li>
+          <li class="medical-box" translate="INDEX.CONTENT.OPTION_THREE"></li>
+          <li class="medical-box" translate="INDEX.CONTENT.OPTION_FOUR"></li>
         </ul>
       </div>
       <div class="col col-50 col-center">
@@ -54,7 +42,7 @@
       </div>
     </div>
     <p><br />
-      <span class="medical-box" translate="DASH.CONTENT.INFO_FOUR"></span> 
+      <span class="medical-box" translate="INDEX.CONTENT.INFO_FOUR"></span> 
       <br />
       </p>
     <div class="row">
@@ -65,8 +53,15 @@
       </div>
       <div class="col col-50 col-center" >
         
-        <p translate="DASH.CONTENT.INFO_FIVE"></p>
+        <p translate="INDEX.CONTENT.INFO_FIVE"></p>
       </div>
+    </div>
+    <div class="row">
+      <div class="col col-25 col-center"><hr class="hyphen"></hr></div>
+      <div class="col  col-50">
+        <ng-include src="'templates/login/_login_form.html'"></ng-include>
+      </div>
+      <div class="col col-25 col-center"><hr class="hyphen"></hr></div>
     </div>
     <footer>
     <div class="row">

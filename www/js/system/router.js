@@ -34,7 +34,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
 
   .state('index', {
     url: '/index',
-    templateUrl: 'templates/tab-index.html'
+    templateUrl: 'templates/index.html'
     // controller: 'IndexCtrl'
   })
 

@@ -1,10 +1,16 @@
 ﻿{
   "ERRORS": {
   },
-  "DASH": {
+  "INDEX": {
     "BUTTONS": {
       "SIGNUP": "Registrate",
       "LOGIN": "Entrar"
+    },
+    "INPUT": {
+      "USERNAME": "Usuario",
+      "PASSWORD": "Contraseña",
+      "REMEMBER_ME": "Recordarme",
+      "FORGOT_PASSWORD": "Olvidé Contraseña?"
     },
     "CONTENT": {
       "INFO": "<span class='medical-box'>MedicalBox</span> Busca el centro médico mas cercano, realiza tu cita, y listo!!! Una forma rápida de mantener la salúd.",
