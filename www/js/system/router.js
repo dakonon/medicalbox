@@ -24,26 +24,18 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
 })
 
 .config(function($stateProvider, $urlRouterProvider,$translateProvider) {
-
-  // Ionic uses AngularUI Router which uses the concept of states
-  // Learn more here: https://github.com/angular-ui/ui-router
-  // Set up the various states which the app can be in.
-  // Each state's controller can be found in controllers.js
   $stateProvider
 
-  // setup an abstract state for the tabs directive
-    .state('tab', {
+  .state('tab', {
     url: '/tab',
     abstract: true,
     templateUrl: 'templates/tabs.html'
   })
 
-  // Each tab has its own nav history stack:
-
-  .state('dash', {
-    url: '/dash',
-    templateUrl: 'templates/tab-dash.html',
-    controller: 'DashCtrl'
+  .state('index', {
+    url: '/index',
+    templateUrl: 'templates/tab-index.html'
+    // controller: 'IndexCtrl'
   })
 
   .state('tab.chats', {
@@ -55,15 +47,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         }
       }
     })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
+  
+  .state('tab.chat-detail', {
+    url: '/chats/:chatId',
+    views: {
+      'tab-chats': {
+        templateUrl: 'templates/chat-detail.html',
+        controller: 'ChatDetailCtrl'
       }
-    })
+    }
+  })
 
   .state('tab.account', {
     url: '/account',
@@ -74,6 +67,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     }
   })
+
   
    .state('signup', {
       url: '/signup',
@@ -87,10 +81,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
   $urlRouterProvider.otherwise('/dash');
 
 
-        $translateProvider.useStaticFilesLoader({
-            prefix: 'js/locales/locale-',
-            suffix: '.json'
-        });
-        $translateProvider.preferredLanguage('es');
 
+  $urlRouterProvider.otherwise('index');
+  $translateProvider.useStaticFilesLoader({
+      prefix: 'js/locales/locale-',
+      suffix: '.json'
+  });
+  $translateProvider.preferredLanguage('es');
+  // $translateProvider.useSanitizeValueStrategy('escape');
 });
