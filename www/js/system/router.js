@@ -69,13 +69,11 @@ angular.module('medicalbox', ['ionic', 'medicalbox.controllers', 'medicalbox.ser
   })
 
   
-   .state('signup', {
-      url: '/signup',
-        templateUrl: 'templates/login/signup.html',
-        controller: 'LoginCtrl' 
-
-      }
-    );
+  .state('signup', {
+    url: '/signup',
+      templateUrl: 'templates/login/signup.html',
+      controller: 'LoginCtrl'
+  });
 
   // if none of the above states are matched, use this as the fallback
 

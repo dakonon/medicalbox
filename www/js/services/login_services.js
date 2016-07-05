@@ -2,9 +2,9 @@ angular.module('medicalbox.services', [])
 
 .service('AuthService', AuthService);
 
-AuthService.$inject = ['$http', '$q', 'constants']
+AuthService.$inject = ['$http', '$q', 'constants'];
 
-function AuthService($http, $q, constants) {
+function AuthService($http, $q) {
 
   var data = {"token": "123"};
 

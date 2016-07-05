@@ -1,6 +1,6 @@
 angular.module('medicalbox.controllers', [])
 
-.controller('IndexCtrl', function($scope) {})
+// .controller('IndexCtrl', function($scope) {})
 
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
