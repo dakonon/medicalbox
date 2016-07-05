@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('medicalbox.controllers', [])
 
 .controller('LoginCtrl', function($scope, AuthService) {
   $scope.login = function () {

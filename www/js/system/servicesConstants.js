@@ -1,4 +1,4 @@
-angular.module('starter.services', [])
+angular.module('medicalbox.services', [])
 
 .service('constants', constantsService);
 
