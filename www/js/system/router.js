@@ -78,8 +78,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
    .state('signup', {
       url: '/signup',
         templateUrl: 'templates/login/signup.html',
-        controller: 'LoginCtrl'
-        
+        controller: 'LoginCtrl' 
+
       }
     );
 
