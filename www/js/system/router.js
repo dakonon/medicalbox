@@ -5,7 +5,9 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('medicalbox', ['ionic', 'medicalbox.controllers', 'medicalbox.services', 'pascalprecht.translate'])
+
+
+angular.module('medicalbox')
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -23,7 +25,11 @@ angular.module('medicalbox', ['ionic', 'medicalbox.controllers', 'medicalbox.ser
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider,$translateProvider) {
+.config(config);
+
+ config.$inject = ['$stateProvider', '$urlRouterProvider', '$translateProvider'];
+
+    function config($stateProvider, $urlRouterProvider, $translateProvider) {
   $stateProvider
 
   .state('tab', {
@@ -34,19 +40,19 @@ angular.module('medicalbox', ['ionic', 'medicalbox.controllers', 'medicalbox.ser
 
   .state('index', {
     url: '/index',
-    templateUrl: 'templates/index.html',
-    controller: 'LoginCtrl'
+    templateUrl: 'templates/index.html'
+    // controller: 'IndexCtrl'
   })
 
   .state('tab.chats', {
-    url: '/chats',
-    views: {
-      'tab-chats': {
-        templateUrl: 'templates/tab-chats.html',
-        controller: 'ChatsCtrl'
+      url: '/chats',
+      views: {
+        'tab-chats': {
+          templateUrl: 'templates/tab-chats.html',
+          controller: 'ChatsCtrl'
+        }
       }
-    }
-  })
+    })
   
   .state('tab.chat-detail', {
     url: '/chats/:chatId',
@@ -69,11 +75,13 @@ angular.module('medicalbox', ['ionic', 'medicalbox.controllers', 'medicalbox.ser
   })
 
   
-  .state('signup', {
-    url: '/signup',
-      templateUrl: 'templates/login/signup.html',
-      controller: 'LoginCtrl'
-  });
+   .state('signup', {
+      url: '/signup',
+        templateUrl: 'templates/login/signup.html',
+        controller: 'LoginCtrl' 
+
+      }
+    );
 
   // if none of the above states are matched, use this as the fallback
 
@@ -86,4 +94,5 @@ angular.module('medicalbox', ['ionic', 'medicalbox.controllers', 'medicalbox.ser
   });
   $translateProvider.preferredLanguage('es');
   // $translateProvider.useSanitizeValueStrategy('escape');
-});
+};
+

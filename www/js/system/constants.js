@@ -1,17 +1,20 @@
+(function () {
+    'use strict';
 angular.module('medicalbox.services', [])
-// .provider('constants', function () {})
 .service('constants', constantsService);
 
 function constantsService() {
     var self = this;
     var URL_BASE='http://localhost:8000/api/';
-    self.providers = {};
+    self.login = {};
   
     /* URL to Providers */
 
-    self.providers.getToken = function (p, rpp, f) {
-        var url = baseUrl + 'api-token-auth/';
+    self.login.getToken = function () {
+        var url = URL_BASE + 'api-token-auth/';
         return url;
     };
     
-};
+}
+
+})()
