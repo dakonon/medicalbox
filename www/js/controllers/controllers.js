@@ -1,4 +1,4 @@
-angular.module('medicalbox.controllers', [])
+angular.module('medicalbox.Controllers')
 
 // .controller('IndexCtrl', function($scope) {})
 

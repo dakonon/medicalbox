@@ -1,6 +1,6 @@
 (function () {
     'use strict';
-angular.module('medicalbox.services', [])
+angular.module('medicalbox.Services')
 .service('constants', constantsService);
 
 function constantsService() {
