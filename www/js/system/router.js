@@ -42,16 +42,18 @@ angular.module('medicalbox')
 
         .state('index', {
           url: '/index',
-          templateUrl: 'templates/index.html'
-          
+          templateUrl: 'templates/index.html'          
         })
-
-
          .state('signup', {
             url: '/signup',
             templateUrl: 'templates/login/signup.html',
             controller: 'LoginCtrl' 
           })
+
+        .state('doctors', {
+          url: '/doctors/index',
+          templateUrl: 'js/doctors/index.html'
+        })
 
         $urlRouterProvider.otherwise('/index')
 

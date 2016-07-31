@@ -8,16 +8,33 @@ AuthService.$inject = ['$http', '$q', 'constants']
 
 function AuthService($http, $q,constants) {
 	var self = this;
-	self.token = onToken
-  
-
+	self.Login = onLogin;
   //var url= constants.login.getToken();
   
-    function onToken(){
-    	var data = {"token": "123"};
-      if (data.token)
-        return data.token;
-      return false;
+    function onLogin(username, password){
+      var deferred = $q.defer();
+      var promise = deferred.promise;
+      var url = constants.login.getToken();
+      $http.get(url+token)
+        .success(function(data) {
+          if(data) {
+            deferred.resolve(data);
+          }
+          else {
+            deferred.reject(data);
+          }
+        }).error(function(data) {
+          deferred.reject(data);
+        });
+        promise.success = function(fn) {
+          promise.then(fn);
+          return promise;
+        }
+        promise.error = function(fn) {
+          promise.then(null, fn);
+          return promise;
+        }
+       return promise;
     }
   
 }
