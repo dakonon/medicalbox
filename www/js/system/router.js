@@ -32,70 +32,64 @@ angular.module('medicalbox')
  config.$inject = ['$stateProvider', '$urlRouterProvider', '$translateProvider'];
 
     function config($stateProvider, $urlRouterProvider, $translateProvider) {
-  $stateProvider
+        $stateProvider
 
-  .state('tab', {
-    url: '/tab',
-    abstract: true,
-    templateUrl: 'templates/tabs.html'
-  })
+        .state('tab', {
+          url: '/tab',
+          abstract: true,
+          templateUrl: 'templates/tabs.html'
+        })
 
-  .state('index', {
-    url: '/index',
-    templateUrl: 'templates/index.html'
-    
-  })
+        .state('index', {
+          url: '/index',
+          templateUrl: 'templates/index.html'
+          
+        })
 
-  .state('tab.chats', {
-      url: '/chats',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
-        }
-      }
-    })
-  
-  .state('tab.chat-detail', {
-    url: '/chats/:chatId',
-    views: {
-      'tab-chats': {
-        templateUrl: 'templates/chat-detail.html',
-        controller: 'ChatDetailCtrl'
-      }
-    }
-  })
+        .state('tab.chats', {
+            url: '/chats',
+            views: {
+              'tab-chats': {
+                templateUrl: 'templates/tab-chats.html',
+                controller: 'ChatsCtrl'
+              }
+            }
+          })
+        
+        .state('tab.chat-detail', {
+          url: '/chats/:chatId',
+          views: {
+            'tab-chats': {
+              templateUrl: 'templates/chat-detail.html',
+              controller: 'ChatDetailCtrl'
+            }
+          }
+        })
 
-  .state('tab.account', {
-    url: '/account',
-    views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
-      }
-    }
-  })
+        .state('tab.account', {
+          url: '/account',
+          views: {
+            'tab-account': {
+              templateUrl: 'templates/tab-account.html',
+              controller: 'AccountCtrl'
+            }
+          }
+        })
 
-  
-   .state('signup', {
-      url: '/signup',
-        templateUrl: 'templates/login/signup.html',
-        controller: 'LoginCtrl' 
+         .state('signup', {
+            url: '/signup',
+            templateUrl: 'templates/login/signup.html',
+            controller: 'LoginCtrl' 
+          })
 
-      }
-    );
+        $urlRouterProvider.otherwise('/index')
 
-  // if none of the above states are matched, use this as the fallback
-
-
-
-  $urlRouterProvider.otherwise('index');
-  $translateProvider.useStaticFilesLoader({
-      prefix: 'js/locales/locale-',
-      suffix: '.json'
-  });
-  $translateProvider.preferredLanguage('es');
+        $translateProvider.useStaticFilesLoader({
+            prefix: 'js/locales/locale-',
+            suffix: '.json'
+        });
+        $translateProvider.preferredLanguage('es');
   // $translateProvider.useSanitizeValueStrategy('escape');
-};
+    };
 
 })()
