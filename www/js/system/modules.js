@@ -2,6 +2,7 @@
     'use strict'
     var dependencies = [
         'ui.router'
+        , 'medicalbox.Models'
         , 'medicalbox.Controllers'
         , 'medicalbox.Services'
         , 'medicalbox.Directives'
