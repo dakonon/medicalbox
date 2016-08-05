@@ -11,6 +11,7 @@
    ]
 
     angular.module('medicalbox', dependencies);
+     angular.module('medicalbox.Models', []);
     angular.module('medicalbox.Controllers', []);
     angular.module('medicalbox.Services', []);
     angular.module('medicalbox.Directives', []);

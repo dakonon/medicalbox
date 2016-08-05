@@ -11,16 +11,22 @@ angular.module('medicalbox.Services')
 AuthService.$inject = ['$http', '$q', 'constants']
 
 function AuthService($http, $q,constants) {
+
 	var self = this;
 	self.Login = onLogin;
-  //var url= constants.login.getToken();
   
     function onLogin(username, password){
+        console.log("prueba");
+      var parametros = JSON.stringify({
+        username: username,
+        password: password
+      })
       var deferred = $q.defer();
       var promise = deferred.promise;
       var url = constants.login.getToken();
-      $http.get(url+token)
+      $http.post(url,parametros)
         .success(function(data) {
+          console.log(data)
           if(data) {
             deferred.resolve(data);
           }
@@ -30,15 +36,15 @@ function AuthService($http, $q,constants) {
         }).error(function(data) {
           deferred.reject(data);
         });
-        promise.success = function(fn) {
-          promise.then(fn);
-          return promise;
-        }
-        promise.error = function(fn) {
-          promise.then(null, fn);
-          return promise;
-        }
-       return promise;
+         promise.success = function(fn) {
+              promise.then(fn);
+              return promise;
+            }
+            promise.error = function(fn) {
+              promise.then(null, fn);
+              return promise;
+            }
+        return promise;
     }
   
 }

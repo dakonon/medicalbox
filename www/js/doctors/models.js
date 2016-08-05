@@ -45,3 +45,5 @@ angular.module('medicalbox.Models')
 
 
 });
+
+})()
