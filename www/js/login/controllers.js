@@ -1,8 +1,12 @@
+/*******************************************
+  *   Created by: @pdonaire1                *
+  *   Ing. Pablo Alejandro Gonzalez Donaire *
+  *******************************************/
 (function () {
     'use strict'
 angular.module('medicalbox.Controllers').controller('LoginCtrl', LoginCtrl);
 
-    LoginCtrl.$inject = ['$scope','$q','AuthService', '$state', '$ionicLoading', 'localStorageService']
+    // LoginCtrl.$inject = ['$scope','$q','AuthService', '$state', '$ionicLoading', 'localStorageService']
 
     function LoginCtrl($scope, $q, AuthService, $state, $ionicLoading, localStorageService) {
     	$scope.onLogin = onLogin;
