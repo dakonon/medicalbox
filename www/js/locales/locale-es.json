@@ -7,7 +7,13 @@
     "BUTTONS": {
       "SIGNUP": "Registrate",
       "LOGIN": "Entrar",
-      "SELECT_OPTION": "Selecciona una opción"
+      "SELECT_OPTION": "Selecciona una opción",
+      "MY_CLINICS": "Mis Clínicas",
+      "CREATE_CLINIC": "Crear Una Clínica U Hospital",
+      "APPOINTMENTS": "Mis Citas",
+      "SETTINGS": "Configuración",
+      "PATIENTS": "Pacientes",
+      "FIND_CLINIC": "Encontrar clínicas"
     },
     "INPUT": {
       "USERNAME": "Usuario",
@@ -17,8 +23,8 @@
     },
     "CONTENT": {
       "INFO": "<span class='medical-box'>MedicalBox</span> Busca el centro médico mas cercano, realiza tu cita, y listo!!! Una forma rápida de mantener la salúd.",
-      "INFO_TWO": "Esta es la forma más fácil de hacer la busqueda de la clinica que necesites para hacer su chequeo médico regularmente. Además es completamente <span class='medical-box'>Gratis!!</span>",
-      "INFO_THREE": "Solo necesitas registrarte como Paciente o Doctor (en el caso de que desees crear una clinica) y buscar en el mapa los centros clinicos mas cercanos según su posición al hacer click en <img src='img/icons/chrome_map.png' width='27px' />.",
+      "INFO_TWO": "Esta es la forma más fácil de hacer la busqueda de la clínica que necesites para hacer su chequeo médico regularmente. Además es completamente <span class='medical-box'>Gratis!!</span>",
+      "INFO_THREE": "Solo necesitas registrarte como Paciente o Doctor (en el caso de que desees crear una clínica) y buscar en el mapa los centros clínicos mas cercanos según su posición al hacer click en <img src='img/icons/chrome_map.png' width='27px' />.",
       "OPTION_ONE": "· Encuentra.",
       "OPTION_TWO": "· Chatea.",
       "OPTION_THREE": "· Úbica.",

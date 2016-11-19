@@ -54,9 +54,13 @@ angular.module('medicalbox')
           templateUrl: 'templates/login/dashboad.html',
         })
 
-        .state('doctors', {
-          url: '/doctors/index',
-          templateUrl: 'js/doctors/index.html'
+        .state('doctor', {
+          url: '/doctor',
+          templateUrl: 'templates/doctors/index.html'
+          // views: {
+          //   'menuContent': {
+          //   }
+          // }
         })
 
         $urlRouterProvider.otherwise('/index')

@@ -66,6 +66,16 @@ hr.hyphen{
 .doctor-backgorund {
   background: #dbf6ff !important;
 }
+.sweat-doctor-background {
+  background: #F7FDFC;
+}
 .patient-backgorund {
   background: #fffdca !important;
+}
+.pointer {
+  cursor: pointer;
+}
+.icon-button {
+  width: 100%;
+  max-width: 128px;
 }
