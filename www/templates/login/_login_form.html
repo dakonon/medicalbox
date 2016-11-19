@@ -2,22 +2,28 @@
     *   Created by: @pdonaire1                *
     *   Ing. Pablo Alejandro Gonzalez Donaire *
     *******************************************-->
-<div ng-controller="LoginCtrl">
+<div ng-controller="LoginCtrl" class="text-center">
+  <div class="card" ng-show="invalidUser || invalidForm">
+    <div class="item item-text-wrap">
+      <div ng-show="invalidUser" class="assertive" translate="ERRORS.INVALID_USER"></div>
+      <div ng-show="invalidForm" class="assertive" translate="ERRORS.INVALID_FORM"></div>
+    </div>
+  </div>
   <a ng-href="signup" class="button button-block button-calm slide-to-left-fast" 
     ui-sref="signup" translate="INDEX.BUTTONS.SIGNUP" ></a>
 
-  <label class="item item-input slide-to-left-middle">
+  <label class="item item-input slide-to-left-middle text-left" ng-click="cleanErrors()">
     <span class="input-label" for="username" translate="INDEX.INPUT.USERNAME"></span>
-    <input type="text" id="username" ng-model="login.username" placeholder="Username">
+    <input type="text" id="username" ng-model="login.username" placeholder="Username" >
   </label>
 
-  <label class="item item-input slide-to-left-middle">
+  <label class="item item-input slide-to-left-middle text-left" ng-click="cleanErrors()">
     <span class="input-label" translate="INDEX.INPUT.PASSWORD"></span>
     <input type="password" id="password" ng-model="login.password" 
       translate translate-attr-placeholder="INDEX.INPUT.PASSWORD">
   </label>
 
-  <div class="slide-to-left-middle">
+  <div class="slide-to-left-middle text-left">
     <ion-checkbox ng-model="login.remember_me">
       <span class="little-text" translate="INDEX.INPUT.REMEMBER_ME"></span>
     </ion-checkbox>
@@ -27,6 +33,6 @@
   <a href="" class="little-text" translate="INDEX.INPUT.FORGOT_PASSWORD"></a>
 
   <button class="button button-block button-positive slide-to-left-slow" 
-    translate="INDEX.BUTTONS.LOGIN" ng-click="login()"></button>
+    translate="INDEX.BUTTONS.LOGIN" ng-click="onLogin()"></button>
   </div>
 </div>

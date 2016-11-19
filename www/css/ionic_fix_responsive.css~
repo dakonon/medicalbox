@@ -53,3 +53,7 @@
 .button{
   display: inline-grid !important;
 }
+
+img {
+  border-radius: 17px !important;
+}

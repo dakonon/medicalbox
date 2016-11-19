@@ -44,11 +44,15 @@ angular.module('medicalbox')
           url: '/index',
           templateUrl: 'templates/index.html'          
         })
-         .state('signup', {
-            url: '/signup',
-            templateUrl: 'templates/login/signup.html',
-            controller: 'LoginCtrl' 
-          })
+        .state('signup', {
+          url: '/signup',
+          templateUrl: 'templates/login/signup.html',
+          controller: 'LoginCtrl' 
+        })
+        .state('dashboad', {
+          url: '/dashboad',
+          templateUrl: 'templates/login/dashboad.html',
+        })
 
         .state('doctors', {
           url: '/doctors/index',

@@ -1,0 +1,28 @@
+<!--*******************************************
+    *   Created by: @pdonaire1                *
+    *   Ing. Pablo Alejandro Gonzalez Donaire *
+    *******************************************-->
+<ion-view style="" title="MedicalBox" class=" " id="" ng-controller="dashboadCtrl">
+  <ion-content class="has-header text-center" padding="true">
+
+    <h2><span class="medical-box">MedicalBox</span></h2>
+    <p>
+      <span translate="INDEX.BUTTONS.SELECT_OPTION"></span>
+    </p>
+    <div class="card" style="cursor:pointer">
+      <div class="item item-text-wrap doctor-backgorund">
+        <img src="/img/icons/doctor_button.png" /><br />
+        <span translate="DASHBOARD.DOCTOR"></span>
+      </div>
+    </div>
+    <div class="card" style="cursor:pointer">
+      <div class="item item-text-wrap patient-backgorund">
+        <img src="/img/icons/patient_button.png" /><br />
+        <span translate="DASHBOARD.PATIENT"></span>
+      </div>
+    </div>
+    {{userData}}
+
+           
+  </ion-content>
+</ion-view>

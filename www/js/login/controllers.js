@@ -2,35 +2,46 @@
     'use strict'
 angular.module('medicalbox.Controllers').controller('LoginCtrl', LoginCtrl);
 
-    LoginCtrl.$inject = ['$scope','$q','AuthService', '$state']
+    LoginCtrl.$inject = ['$scope','$q','AuthService', '$state', '$ionicLoading', 'localStorageService']
 
-    function LoginCtrl($scope, $q, AuthService, $state) {
-    	$scope.login = onLogin;
-
-    	function onLogin(){
+    function LoginCtrl($scope, $q, AuthService, $state, $ionicLoading, localStorageService) {
+    	$scope.onLogin = onLogin;
+      $scope.invalidUser = false;
+      $scope.invalidForm = false;
+      $scope.login = {
+        username:"",
+        password: ""
+      }
+      $scope.cleanErrors = function (){
+        console.log("cleanErrors");
+        $scope.invalidUser = false;
+        $scope.invalidForm = false;
+      }
+    	
+      function onLogin(){
+        
+        if (!$scope.login.username || !$scope.login.password){
+          $scope.invalidForm = true; 
+          return false;
+        }
         $ionicLoading.show({});
         AuthService.onLogin($scope.login.username, $scope.login.password)
         .success(function(data) {
+          $ionicLoading.hide();
           if(data.token)
           {
-            $ionicLoading.hide();
-            // localStorageService.set('access_token', data.token);
-            alert(data.token);
-            $state.go('index');
+            console.log(data);
+            localStorageService.set('access_token', data.token);
+            localStorageService.set('user_data', data);
+            $state.go('dashboad');
           }
           else{
             $ionicLoading.hide();
-            var alertPopup = $ionicPopup.alert({
-              title: 'Error al entrar!',
-              template: 'Por favor verifica tus credenciales!'
-            });
+            $scope.invalidUser = true;
           }
           }).error(function(data) {
             $ionicLoading.hide();
-            var alertPopup = $ionicPopup.alert({
-              title: 'Error al entrar!',
-              template: 'Error en el servidor, intente mas tarde!'
-            });
+            $scope.invalidUser = true;
           });
       }
 	}

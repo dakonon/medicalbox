@@ -8,10 +8,12 @@
         , 'medicalbox.Directives'
         , 'pascalprecht.translate'
         ,'ionic'
+        ,'LocalStorageModule'
    ]
 
     angular.module('medicalbox', dependencies);
     angular.module('medicalbox.Controllers', []);
+    angular.module('medicalbox.Models', []);
     angular.module('medicalbox.Services', []);
     angular.module('medicalbox.Directives', []);
 

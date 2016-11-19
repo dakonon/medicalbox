@@ -3,6 +3,9 @@
  *            MAIN CSS               *
  *************************************
 */
+$doctor-color: #dbf6ff;
+$patient-color: #fffdca;
+
 body{
   font-family: 'Open Sans' !important;
   color: #636262;
@@ -58,4 +61,11 @@ hr.hyphen{
     margin-left: 0%;
     width: 100%;
   }
+}
+
+.doctor-backgorund {
+  background: #dbf6ff !important;
+}
+.patient-backgorund {
+  background: #fffdca !important;
 }

@@ -1,10 +1,13 @@
 ﻿{
   "ERRORS": {
+    "INVALID_USER": "Usuario inválido",
+    "INVALID_FORM": "Formulario inválido"
   },
   "INDEX": {
     "BUTTONS": {
       "SIGNUP": "Registrate",
-      "LOGIN": "Entrar"
+      "LOGIN": "Entrar",
+      "SELECT_OPTION": "Selecciona una opción"
     },
     "INPUT": {
       "USERNAME": "Usuario",
@@ -23,5 +26,9 @@
       "INFO_FOUR": "Sencillo!",
       "INFO_FIVE": "Si necesita ayuda puede ver el <a href='' class='medical-box'>manual de usuario</a> o dirigirse a solicitarnos ayuda en info@medicalbox.com y les responderemos a la brevedad."
     }
+  },
+  "DASHBOARD": {
+    "DOCTOR": "Dóctor",
+    "PATIENT": "Paciente"
   }
 }
