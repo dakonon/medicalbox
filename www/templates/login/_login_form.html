@@ -9,8 +9,8 @@
       <div ng-show="invalidForm" class="assertive" translate="ERRORS.INVALID_FORM"></div>
     </div>
   </div>
-  <a ng-href="signup" class="button button-block button-calm slide-to-left-fast" 
-    ui-sref="signup" translate="INDEX.BUTTONS.SIGNUP" ></a>
+  <a class="button button-block button-calm slide-to-left-fast" 
+    ui-sref="register" translate="INDEX.BUTTONS.SIGNUP" ></a>
 
   <label class="item item-input slide-to-left-middle text-left" ng-click="cleanErrors()">
     <span class="input-label" for="username" translate="INDEX.INPUT.USERNAME"></span>
@@ -32,7 +32,7 @@
   <div class="slide-to-left-middle">
   <a href="" class="little-text" translate="INDEX.INPUT.FORGOT_PASSWORD"></a>
 
-  <button class="button button-block button-positive slide-to-left-slow" 
+  <button class="button button-block button-calm slide-to-left-slow" 
     translate="INDEX.BUTTONS.LOGIN" ng-click="onLogin()"></button>
   </div>
 </div>
