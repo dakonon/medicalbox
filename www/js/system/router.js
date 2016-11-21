@@ -53,7 +53,7 @@ angular.module('medicalbox')
           url: '/dashboad',
           templateUrl: 'templates/login/dashboad.html',
         })
-
+        /* DOCTORS URLS */
         .state('doctor', {
           url: '/doctor',
           templateUrl: 'templates/doctors/index.html'
@@ -62,6 +62,23 @@ angular.module('medicalbox')
           //   }
           // }
         })
+        .state('doctor-clinics', {
+          url: '/doctor/my-clinics',
+          templateUrl: 'templates/doctors/my-clinics.html'
+          // views: {
+          //   'menuContent': {
+          //   }
+          // }
+        })
+        .state('doctor-clinics-create', {
+          url: '/doctor/my-clinics/create',
+          templateUrl: 'templates/doctors/my-clinics-create.html'
+          // views: {
+          //   'menuContent': {
+          //   }
+          // }
+        })
+        /* END DOCTORS URLS*/
 
         $urlRouterProvider.otherwise('/index')
 

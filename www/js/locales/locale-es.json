@@ -13,13 +13,23 @@
       "APPOINTMENTS": "Mis Citas",
       "SETTINGS": "Configuración",
       "PATIENTS": "Pacientes",
-      "FIND_CLINIC": "Encontrar clínicas"
+      "FIND_CLINIC": "Encontrar clínicas",
+      "CREATE": "Crear"
     },
     "INPUT": {
       "USERNAME": "Usuario",
       "PASSWORD": "Contraseña",
       "REMEMBER_ME": "Recordarme",
-      "FORGOT_PASSWORD": "Olvidé Contraseña?"
+      "FORGOT_PASSWORD": "Olvidé Contraseña?",
+      "NAME":"Nombre",
+      "COUNTRY": "País",
+      "CITY": "Ciudad",
+      "ADDRESS": "Dirección",
+      "ZIP_CODE": "Código ZIP (opcional)",
+      "LATITUDE": "Latitud (opcional)",
+      "LONGITUDE": "Longitud (opcional)",
+      "PHONE_ONE": "Teléfono uno (opcional)",
+      "PHONE_TWO": "Teléfono dos (opcional)"
     },
     "CONTENT": {
       "INFO": "<span class='medical-box'>MedicalBox</span> Busca el centro médico mas cercano, realiza tu cita, y listo!!! Una forma rápida de mantener la salúd.",

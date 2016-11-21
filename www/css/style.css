@@ -79,3 +79,6 @@ hr.hyphen{
   width: 100%;
   max-width: 128px;
 }
+.not-required {
+  color: #7b7b7b;
+}
