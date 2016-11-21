@@ -40,6 +40,12 @@ angular.module('medicalbox')
           templateUrl: 'templates/tabs.html'
         })
 
+        .state('tabUser', {
+          url: '/tabUser',
+          abstract: true,
+          templateUrl: 'templates/tabsUser.html'
+        })
+
         .state('index', {
           url: '/index',
           templateUrl: 'templates/index.html'          
@@ -59,7 +65,6 @@ angular.module('medicalbox')
         /* DOCTORS URLS */
         .state('tab.doctor', {
           url: '/doctor',
-          
            views: {
              'doctor': {
                 templateUrl: 'templates/doctors/index.html'
