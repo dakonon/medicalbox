@@ -6,7 +6,7 @@ angular.module('medicalbox.Controllers').controller('ClinicCreateCrtl', ClinicCr
 
     function ClinicCreateCrtl($scope, $q, AuthService, $state, $ionicLoading, localStorageService) {
     	$scope.userData = localStorageService.get('user_data');
-    	
+
       
       
 	}
