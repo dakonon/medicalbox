@@ -44,9 +44,9 @@ angular.module('medicalbox')
           url: '/index',
           templateUrl: 'templates/index.html'          
         })
-        .state('signup', {
-          url: '/signup',
-          templateUrl: 'templates/login/signup.html',
+        .state('register', {
+          url: '/register',
+          templateUrl: 'templates/register/register.html',
           controller: 'LoginCtrl' 
         })
         .state('dashboad', {

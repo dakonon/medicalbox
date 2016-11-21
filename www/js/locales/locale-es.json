@@ -36,5 +36,17 @@
   "DASHBOARD": {
     "DOCTOR": "Dóctor",
     "PATIENT": "Paciente"
+  },
+  "REGISTER": {
+    "title": "Registro",
+    "user": "Usuario",
+    "email": "Email",
+    "pass": "Contraseña",
+    "pass2": "Repita su contraseña",
+    "user_place": "Usuario",
+    "email_place": "Email",
+    "pass_place": "Contraseña",
+    "pass2_place": "Repita su contraseña"
+
   }
 }
