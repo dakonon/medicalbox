@@ -40,43 +40,49 @@ angular.module('medicalbox')
           templateUrl: 'templates/tabs.html'
         })
 
+        .state('tabUser', {
+          url: '/tabUser',
+          abstract: true,
+          templateUrl: 'templates/tabsUser.html'
+        })
+
         .state('index', {
           url: '/index',
           templateUrl: 'templates/index.html'          
         })
         .state('register', {
           url: '/register',
-          templateUrl: 'templates/register/register.html',
-          controller: 'RegisterCtrl' 
+          controller: 'RegisterCtrl', 
+          templateUrl: "templates/register/register.html"          
         })
         .state('dashboad', {
           url: '/dashboad',
           templateUrl: 'templates/login/dashboad.html',
         })
         /* DOCTORS URLS */
-        .state('doctor', {
+        .state('tab.doctor', {
           url: '/doctor',
-          templateUrl: 'templates/doctors/index.html'
-          // views: {
-          //   'menuContent': {
-          //   }
-          // }
+           views: {
+             'doctor': {
+                templateUrl: 'templates/doctors/index.html'
+             }
+           }
         })
-        .state('doctor-clinics', {
+        .state('tab.doctor-clinics', {
           url: '/doctor/my-clinics',
+           views: {
+            'doctor-clinics': {
           templateUrl: 'templates/doctors/my-clinics.html'
-          // views: {
-          //   'menuContent': {
-          //   }
-          // }
+             }
+           }
         })
-        .state('doctor-clinics-create', {
-          url: '/doctor/my-clinics/create',
-          templateUrl: 'templates/doctors/my-clinics-create.html'
-          // views: {
-          //   'menuContent': {
-          //   }
-          // }
+        .state('tab.doctor-clinics-create', {
+          url: '/doctor/my-clinics/create',          
+           views: {
+             'doctor-clinics-create': {
+                templateUrl: 'templates/doctors/my-clinics-create.html'
+             }
+           }
         })
         /* END DOCTORS URLS*/
 
