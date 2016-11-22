@@ -59,12 +59,14 @@
     "patient":"Paciente",
     "doctor":"Doctor",
     "user_type":"Tipo de Usuario",
+    "profession":"Profesión",
     "first_name_place": "Nombre",
     "last_name_place": "Apellido",
     "email_place": "Email",
     "pass_place": "Contraseña",
     "pass2_place": "Repita su contraseña",
     "phone_number_place": "Teléfono",
-    "address_place": "Dirección"
+    "address_place": "Dirección",
+    "profession_place":"Profesión"
   }
 }
