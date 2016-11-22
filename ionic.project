@@ -1,4 +1,5 @@
 {
-  "name": "medicalBox",
-  "app_id": ""
+  "name": "Medical-Box",
+  "app_id": "",
+  "gulpStartupTasks": []
 }
