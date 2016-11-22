@@ -68,6 +68,14 @@ angular.module('medicalbox')
              }
            }
         })
+        .state('tab.map', {
+          url: '/map',
+           views: {
+             'map': {
+                templateUrl: 'templates/doctors/map.html'
+             }
+           }
+        })
         .state('tab.doctor-clinics', {
           url: '/doctor/my-clinics',
            views: {

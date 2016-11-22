@@ -9,6 +9,7 @@
         , 'pascalprecht.translate'
         ,'ionic'
         ,'LocalStorageModule'
+        , 'ngCordova'    
    ]
 
     angular.module('medicalbox', dependencies);

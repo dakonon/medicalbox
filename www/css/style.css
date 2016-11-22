@@ -3,6 +3,17 @@
  *            MAIN CSS               *
  *************************************
 */
+/* Css Google Map */
+#map {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.scroll {
+  height: 100%;
+}
+
 $doctor-color: #dbf6ff;
 $patient-color: #fffdca;
 
@@ -12,7 +23,7 @@ body{
 }
 footer {
     background-color: #DDD;
-    width: 100%; 
+    width: 2000px; 
     padding: 10px;
     left: -2.5%;
     position: absolute;
@@ -94,75 +105,3 @@ hr.hyphen{
   filter: alpha(opacity=30);
 }
 */
-
-.colorRegister{
-  background-color: #FFEBCD;
-
-}
-
-.colorLabel{
-  color: Dark;
-}
-
-.form-transparent .item-input-wrapper {
-  background-color: rgba(255, 255, 255, 0.7); }
-  .form-transparent .item-input-wrapper.backBlue {
-    background: #87CEEB; }
-
-.form-transparent .item-input-inset .item-input-wrapper input,
-.form-transparent .item-input-inset .item-input-wrapper select {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 0 10px;
-  color: #87CEEB;
-  background: none; }
-
-.form-transparent .item-input-inset .item-input-wrapper input::-webkit-input-placeholder {
-  color: #87CEEB !important; }
-
-.form-transparent .item-input-inset .item-input-wrapper input:-moz-placeholder {
-  color: #87CEEB !important;
-  color: #87CEEB !important; }
-
-.form-transparent .item-input-inset .item-input-wrapper.blue input,
-.form-transparent .item-input-inset .item-input-wrapper.blue select {
-  color: #87CEEB; }
-
-.form-transparent .item-input-inset .item-input-wrapper.blue input::-webkit-input-placeholder {
-  color: #87CEEB !important; }
-
-.form-transparent .item-input-inset .item-input-wrapper.blue input:-moz-placeholder {
-  color: #87CEEB !important;
-  color: #87CEEB !important; }
-
-.form-transparent .item-input-inset .item-input-wrapper.blue select::-webkit-input-placeholder {
-  color: #87CEEB !important; }
-
-.form-transparent .item-input-inset .item-input-wrapper.blue select:-moz-placeholder {
-  color: #87CEEB !important;
-  color: #87CEEB !important; }
-
-.form-transparent .item-input-inset .item-input-wrapper.white input,
-.form-transparent .item-input-inset .item-input-wrapper.white select {
-  color: #87CEEB; }
-
-.form-transparent .item-input-inset .item-input-wrapper.white input::-webkit-input-placeholder {
-  color: #87CEEB !important; }
-
-.form-transparent .item-input-inset .item-input-wrapper.white input:-moz-placeholder {
-  color: #87CEEB !important;
-  color: #87CEEB !important; }
-
-.form-transparent .item-input-inset .item-input-wrapper.white select::-webkit-input-placeholder {
-  color: #87CEEB !important; }
-
-.form-transparent .item-input-inset .item-input-wrapper.white select:-moz-placeholder {
-  color: #87CEEB !important;
-  color: #87CEEB !important; }
-
-.form-transparent .item-input-inset .item-input-wrapper.text-center input {
-  text-align: center; }
-
-.form-transparent .item-input-inset .item-input-wrapper.font20 input {
-  font-size: 20px; }
