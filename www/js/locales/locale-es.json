@@ -49,14 +49,22 @@
   },
   "REGISTER": {
     "title": "Registro",
-    "user": "Usuario",
+    "first_name": "Nombre",
+    "last_name": "Apellido",
     "email": "Email",
     "pass": "Contraseña",
     "pass2": "Repita su contraseña",
-    "user_place": "Usuario",
+    "phone_number":"Teléfono",
+    "address":"Dirección",
+    "patient":"Paciente",
+    "doctor":"Doctor",
+    "user_type":"Tipo de Usuario",
+    "first_name_place": "Nombre",
+    "last_name_place": "Apellido",
     "email_place": "Email",
     "pass_place": "Contraseña",
-    "pass2_place": "Repita su contraseña"
-
+    "pass2_place": "Repita su contraseña",
+    "phone_number_place": "Teléfono",
+    "address_place": "Dirección"
   }
 }
