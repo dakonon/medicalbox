@@ -27,7 +27,7 @@ function AuthService($http, $q, ApiLogin) {
       });
       var deferred = $q.defer();
       var promise = deferred.promise;
-      var url = ApiLogin.getToken();
+      var url = ApiLogin.url;
       
       var params = {username: username, password: password};
       $http.post(url, params).then(function(response){
