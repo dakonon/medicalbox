@@ -1,5 +1,6 @@
 {
     "node": true,
     "browser": true,
+    "debug": true,     // true: Allow debugger statements e.g. browser breakpoints.
     "predef": ["cordova","ionic","angular","alert","$","locache", "response"]
 }

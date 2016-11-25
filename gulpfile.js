@@ -16,7 +16,7 @@ var paths = {
   sass: ['./scss/**/*.scss'],
   jsSrc: ['./www/js/*.js'],
   src: ['./wwww/**/*', '!wwww/lib/**/*', '!www/dist/**/*'],
-  appSrc: ['./www/js/app.js'],
+  appSrc: ['./www/js/config/app.js'],
   bundleSrc: ['./www/js/dist/bundle.js']
 };
 
