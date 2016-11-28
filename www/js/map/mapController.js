@@ -21,7 +21,8 @@ angular.module('medicalbox.Controllers').controller('mapaCtrl', mapaCtrl);
                 position: ubicacion,
                 
             })
-        }
+      }
+      
 
       var initMap = function(){
         var mapDiv = document.getElementById('map');
@@ -33,8 +34,26 @@ angular.module('medicalbox.Controllers').controller('mapaCtrl', mapaCtrl);
 
         $scope.map = new google.maps.Map(mapDiv, mapOptions)
         $scope.locateme();
+        searchPlace();
         
       } 
+
+       var searchPlace = function (){
+            var search = document.getElementById('search');
+            var searchBox = new google.maps.places.SearchBox(search);
+            $scope.map.controls[google.maps.ControlPosition.TOP_LEFT].push(search);
+
+            searchBox.addListener('places_changed', function(){
+                var places = searchBox.getPlaces();
+
+                places.forEach(function(place){
+                    var ubicacion  = place.geometry.location;
+                    addMarker(ubicacion);
+                    $scope.map.setCenter(ubicacion);
+                })
+            })
+
+        }
 
             // extract country short name (e.g. GB for Great Britain) from google geocode API result
       
