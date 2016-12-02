@@ -6,34 +6,49 @@
 $doctor-color: #dbf6ff;
 $patient-color: #fffdca;
 
-body{
+.content-body {
+
+}
+.content-text {
+  background-color: rgba(17, 193, 243, 0.8);
+  border-color: transparent;
+  color: #fff;
+  min-height: 50px;
+  padding: 10px !important;
+  width: 100%;
+}
+.pane, .view {
+  background: url("../img/background.png") !important;
+}
+
+body {
   font-family: 'Open Sans' !important;
   color: #636262;
 }
 footer {
-    background-color: #DDD;
-    width: 2000px; 
-    padding: 10px;
-    left: -2.5%;
-    position: absolute;
-    font-size: 75%;
+  background-color: #DDD;
+  width: 2000px; 
+  padding: 10px;
+  left: -2.5%;
+  position: absolute;
+  font-size: 75%;
 }
-
 .medical-box {
   color: rgba(43, 155, 191, 0.66);
   font-weight: bold;
   font-family: 'Droid Serif', serif;
   /*font-size: 100%;*/
 }
-
 hr.hyphen{
-    border: 0;
-    border-bottom: 1px dashed #ccc;
-    background: #999;
+  border: 0;
+  border-bottom: 1px dashed #ccc;
+  background: #999;
 }
-
 .little-text{
   font-size: 70% !important;
+}
+.circle-radius {
+  border-radius: 50%;
 }
 /********************
  ***** EFFECTS ******
@@ -50,6 +65,15 @@ hr.hyphen{
   animation-duration: 1s;
   animation-name: slidein;
 }
+.slide-to-left-fast-mini {
+  animation-duration: 1s;
+  animation-name: slideon-mini;
+}
+.slide-to-rigth-middle {
+  animation-duration: 2s;
+  animation-name: slideon;
+  padding-left: 12%;
+}
 
 @keyframes slidein {
   from {
@@ -60,6 +84,22 @@ hr.hyphen{
   to {
     margin-left: 0%;
     width: 100%;
+  }
+}
+@keyframes slideon-mini {
+  from {
+    margin-left: 100%;
+  }
+  to {
+
+  }
+}
+@keyframes slideon {
+  from {
+    margin-left: -15%;
+  }
+  to {
+
   }
 }
 
@@ -83,6 +123,25 @@ hr.hyphen{
   color: #7b7b7b;
 }
 
+/** Images **/
+.center-img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+/** Fonts **/
+.text-justify {
+  text-align: justify;
+}
+.sub-title-content {
+  font-size: 1.4em;
+  line-height: 1.4em;
+}
+/** Columnos **/
+.col-bottom {
+  padding-top: 10%;
+  padding-bottom: 1%;
+}
 /*.fondo{
   background-image: url("../img/fondo3.jpg");
   background-size: 200% ;
