@@ -16,11 +16,7 @@ function AuthService($http, $q,constants) {
 	self.onLogin = onLogin;
   
     function onLogin(username, password){
-        console.log("prueba");
-      var parametros = JSON.stringify({
-        username: username,
-        password: password
-      })
+  
       var deferred = $q.defer();
       var promise = deferred.promise;
       var url = constants.login.getToken();

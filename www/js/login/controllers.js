@@ -33,11 +33,20 @@ angular.module('medicalbox.Controllers').controller('LoginCtrl', LoginCtrl);
         .success(function(data) {
           $ionicLoading.hide();
           if(data.token)
-          {
-            console.log(data);
+          {            
             localStorageService.set('access_token', data.token);
             localStorageService.set('user_data', data);
-            $state.go('dashboad');
+            if(data.doctor == null){
+              $state.go('patient');
+            }
+            else if(data.patient == null){
+              $state.go('doctor');
+                
+            }
+            else{
+              $state.go('dashboad');
+            }
+            
           }
           else{
             $ionicLoading.hide();

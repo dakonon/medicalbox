@@ -29,21 +29,23 @@ angular.module('medicalbox')
 
 .config(config);
 
- config.$inject = ['$stateProvider', '$urlRouterProvider', '$translateProvider'];
+ config.$inject = ['$stateProvider', '$urlRouterProvider', '$translateProvider','$ionicConfigProvider'];
 
-    function config($stateProvider, $urlRouterProvider, $translateProvider) {
+    function config($stateProvider, $urlRouterProvider, $translateProvider,$ionicConfigProvider) {
+      $ionicConfigProvider.tabs.position("bottom");
+      $ionicConfigProvider.navBar.alignTitle("center");
         $stateProvider
 
-        .state('tab', {
-          url: '/tab',
+        .state('tabDoctor', {
+          url: '/tabDoctor',
           abstract: true,
-          templateUrl: 'templates/tabs.html'
+          templateUrl: 'templates/tabDoctor.html'
         })
 
-        .state('tabUser', {
-          url: '/tabUser',
+        .state('tabPatient', {
+          url: '/tabPatient',
           abstract: true,
-          templateUrl: 'templates/tabsUser.html'
+          templateUrl: 'templates/tabPatient.html'
         })
 
         .state('index', {
@@ -60,15 +62,11 @@ angular.module('medicalbox')
           templateUrl: 'templates/login/dashboad.html',
         })
         /* DOCTORS URLS */
-        .state('tab.doctor', {
+        .state('doctor', {
           url: '/doctor',
-           views: {
-             'doctor': {
-                templateUrl: 'templates/doctors/index.html'
-             }
-           }
+          templateUrl: 'templates/doctors/index.html'
         })
-        .state('tab.map', {
+        .state('tabDoctor.map', {
           url: '/map',
            views: {
              'map': {
@@ -76,7 +74,7 @@ angular.module('medicalbox')
              }
            }
         })
-        .state('tab.doctor-clinics', {
+        .state('tabDoctor.doctor-clinics', {
           url: '/doctor/my-clinics',
            views: {
             'doctor-clinics': {
@@ -84,7 +82,7 @@ angular.module('medicalbox')
              }
            }
         })
-        .state('tab.doctor-clinics-create', {
+        .state('tabDoctor.doctor-clinics-create', {
           url: '/doctor/my-clinics/create',          
            views: {
              'doctor-clinics-create': {
@@ -93,7 +91,20 @@ angular.module('medicalbox')
            }
         })
         /* END DOCTORS URLS*/
-
+         /* PATIENTS URLS */
+         .state('patient', {
+          url: '/patient',
+          templateUrl: 'templates/patient/index.html'
+        })
+        .state('tabPatient.patient-clinics', {
+          url: '/patient/find-clinics',
+           views: {
+            'patient-clinics': {
+          templateUrl: 'templates/patient/find-clinics.html'
+             }
+           }
+        })
+         /* END PATIENTS URLS*/
         $urlRouterProvider.otherwise('/index')
 
         $translateProvider.useStaticFilesLoader({

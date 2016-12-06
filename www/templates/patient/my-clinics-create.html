@@ -14,21 +14,21 @@
         <div class="list">
           <label class="item item-input">
             <span class="input-label" translate="INDEX.INPUT.NAME"></span>
-            <input type="text" placeholder="{{ 'INDEX.INPUT.NAME' | translate }}" ng-model="data.name">
-          </label>
-          <label class="item item-input">
-            <span class="input-label" translate="INDEX.INPUT.CITY"></span>
-            <input type="text" placeholder="{{ 'INDEX.INPUT.CITY' | translate }}" ng-model="data.city_id">
+            <input type="text" placeholder="{{ 'INDEX.INPUT.NAME' | translate }}">
           </label>
           <label class="item item-input">
             <span class="input-label" translate="INDEX.INPUT.COUNTRY"></span>
-            <input type="text" placeholder="{{ 'INDEX.INPUT.COUNTRY' | translate }}" ng-model="data.country_id">
-          </label>          
+            <input type="password" placeholder="{{ 'INDEX.INPUT.COUNTRY' | translate }}">
+          </label>
+          <label class="item item-input">
+            <span class="input-label" translate="INDEX.INPUT.CITY"></span>
+            <input type="password" placeholder="{{ 'INDEX.INPUT.CITY' | translate }}">
+          </label>
           <label class="item item-input">
             <span class="input-label" translate="INDEX.INPUT.ADDRESS"></span>
-            <input type="text" placeholder="{{ 'INDEX.INPUT.ADDRESS' | translate }}" ng-model="data.address">
+            <input type="password" placeholder="{{ 'INDEX.INPUT.ADDRESS' | translate }}">
           </label>
-          <!--
+
           <label class="item item-input">
             <span class="input-label not-required" translate="INDEX.INPUT.ZIP_CODE"></span>
             <input type="password" placeholder="{{ 'INDEX.INPUT.ZIP_CODE' | translate }}">
@@ -42,19 +42,21 @@
             <input type="password" placeholder="{{ 'INDEX.INPUT.LONGITUDE' | translate }}">
           </label>
           <label class="item item-input">
-            <span class="input-label not-required" translate="INDEX.INPUT.PHONE_TWO"></span>
-            <input type="password" placeholder="{{ 'INDEX.INPUT.PHONE_TWO' | translate }}" >
-          </label>
-          -->
-          <label class="item item-input">
             <span class="input-label not-required" translate="INDEX.INPUT.PHONE_ONE"></span>
-            <input type="tel" placeholder="{{ 'INDEX.INPUT.PHONE_ONE' | translate }}" ng-model="data.phone">
-          </label>          
+            <input type="password" placeholder="{{ 'INDEX.INPUT.PHONE_ONE' | translate }}">
+          </label>
+          <label class="item item-input">
+            <span class="input-label not-required" translate="INDEX.INPUT.PHONE_TWO"></span>
+            <input type="password" placeholder="{{ 'INDEX.INPUT.PHONE_TWO' | translate }}">
+          </label>
         </div>
-        <button ng-click="onCreate()" class="button button-block button-balanced">
+        <button class="button button-block button-balanced">
           <span translate="INDEX.BUTTONS.CREATE"></span>
         </button>
       </div>
-    </div>       
+    </div>
+
+
+           
   </ion-content>
 </ion-view>
