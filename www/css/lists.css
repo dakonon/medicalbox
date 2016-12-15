@@ -1,0 +1,19 @@
+.list-medical .item {
+  border-color: rgba(255, 255, 255, 0);
+  background: linear-gradient(rgba(190, 223, 218, 0.89), rgba(249, 251, 250, 0.11));
+  border: none;
+}
+.list-medical .item h2 {
+  font-weight: bold;
+  color: #4a4545;
+}
+.list-medical .item p{
+  color: #137a84 !important;
+}
+@media (max-width: 450px){
+  .list-medical.list {
+    width: 95%;
+    position: absolute;
+    left: 3%;
+  }
+}

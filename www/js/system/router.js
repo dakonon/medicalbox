@@ -29,9 +29,11 @@ angular.module('medicalbox')
 
 .config(config);
 
- config.$inject = ['$stateProvider', '$urlRouterProvider', '$translateProvider'];
+ config.$inject = ['$stateProvider', '$urlRouterProvider', '$translateProvider', '$ionicConfigProvider'];
 
-    function config($stateProvider, $urlRouterProvider, $translateProvider) {
+    function config($stateProvider, $urlRouterProvider, $translateProvider, $ionicConfigProvider) {
+        $ionicConfigProvider.navBar.alignTitle("center");
+        $ionicConfigProvider.tabs.position("bottom");
         $stateProvider
 
         .state('doctors', {
@@ -76,7 +78,7 @@ angular.module('medicalbox')
              }
            }
         })
-        .state('doctors.clinics', {
+        .state('doctors.my-clinics', {
           url: '/my-clinics',
            views: {
             'doctor-clinics': {
@@ -93,8 +95,8 @@ angular.module('medicalbox')
            }
         })
         /* END DOCTORS URLS*/
-
-        $urlRouterProvider.otherwise('/index')
+        $urlRouterProvider.otherwise('/index');
+        
 
         $translateProvider.useStaticFilesLoader({
             prefix: 'js/locales/locale-',
