@@ -34,10 +34,10 @@ angular.module('medicalbox')
     function config($stateProvider, $urlRouterProvider, $translateProvider) {
         $stateProvider
 
-        .state('tab', {
-          url: '/tab',
+        .state('doctors', {
+          url: '/doctors',
           abstract: true,
-          templateUrl: 'templates/tabs.html'
+          templateUrl: 'templates/doctor-tabs.html'
         })
 
         .state('tabUser', {
@@ -60,7 +60,7 @@ angular.module('medicalbox')
           templateUrl: 'templates/login/dashboad.html',
         })
         /* DOCTORS URLS */
-        .state('tab.doctor', {
+        .state('doctors.doctor', {
           url: '/doctor',
            views: {
              'doctor': {
@@ -68,7 +68,7 @@ angular.module('medicalbox')
              }
            }
         })
-        .state('tab.map', {
+        .state('doctors.map', {
           url: '/map',
            views: {
              'map': {
@@ -76,15 +76,15 @@ angular.module('medicalbox')
              }
            }
         })
-        .state('tab.doctor-clinics', {
-          url: '/doctor/my-clinics',
+        .state('doctors.clinics', {
+          url: '/my-clinics',
            views: {
             'doctor-clinics': {
           templateUrl: 'templates/doctors/my-clinics.html'
              }
            }
         })
-        .state('tab.doctor-clinics-create', {
+        .state('doctors.doctor-clinics-create', {
           url: '/doctor/my-clinics/create',          
            views: {
              'doctor-clinics-create': {
