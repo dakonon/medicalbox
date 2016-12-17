@@ -50,15 +50,15 @@ angular.module('medicalbox')
 
         .state('index', {
           url: '/index',
-          templateUrl: 'templates/index.html'          
+          templateUrl: 'templates/index.html'
         })
         .state('register', {
           url: '/register',
           controller: 'RegisterCtrl', 
-          templateUrl: "templates/register/register.html"          
+          templateUrl: "templates/register/register.html"
         })
-        .state('dashboad', {
-          url: '/dashboad',
+        .state('dashboard', {
+          url: '/dashboard',
           templateUrl: 'templates/login/dashboad.html',
         })
         /* DOCTORS URLS */
@@ -82,18 +82,27 @@ angular.module('medicalbox')
           url: '/my-clinics',
            views: {
             'doctor-clinics': {
-          templateUrl: 'templates/doctors/my-clinics.html'
+              templateUrl: 'templates/doctors/my-clinics.html'
              }
            }
         })
         .state('doctors.doctor-clinics-create', {
-          url: '/doctor/my-clinics/create',          
+          url: '/my-clinics/create',
            views: {
              'doctor-clinics-create': {
                 templateUrl: 'templates/doctors/my-clinics-create.html'
              }
            }
         })
+        .state('doctors.doctor-clinics-edit', {
+          url: '/clinic/edit?id&created_by&name&zip_code&address&latitude&longitude&phone_one&phone_two&country&city&doctors',
+          views: {
+            'doctor-clinics-create': {
+              templateUrl: 'templates/doctors/my-clinics-create.html'
+            }
+          }
+        })
+
         /* END DOCTORS URLS*/
         $urlRouterProvider.otherwise('/index');
         

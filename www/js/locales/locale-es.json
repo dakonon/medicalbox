@@ -3,6 +3,12 @@
     "INVALID_USER": "Usuario inválido",
     "INVALID_FORM": "Formulario inválido"
   },
+  "LAYOUTS": {
+    "GREAT": "Genial",
+    "ERROR": "Error",
+    "SUCCESSFULLY_SAVED": "Datos Guardados exitosamente",
+    "ACCEPT": "Aceptar"
+  },
   "INDEX": {
     "BUTTONS": {
       "SIGNUP": "Registrate",
@@ -68,5 +74,8 @@
     "phone_number_place": "Teléfono",
     "address_place": "Dirección",
     "profession_place":"Profesión"
+  },
+  "CLINIC": {
+    "SUCCESSFULLY_CREATED": "La clinica fue creada exitosamente"
   }
 }

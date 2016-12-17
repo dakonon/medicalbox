@@ -5,18 +5,21 @@ angular.module('medicalbox.Services')
 
 function constantsService() {
     var self = this;
-    // var URL_BASE='https://sandbox-medicalbox-api.herokuapp.com/api/';
-    var URL_BASE='http://localhost:8002/api/';
+    var URL_BASE='http://sandbox-medicalbox-api.herokuapp.com/{0}/api/';
+    // var URL_BASE='http://localhost:8002/{0}/api/';
     self.login = {};
+    self.doctorsUrl = {};
+    self.clinicUrl = {};
     self.register = {};
   
     /* URL to Providers */
 
     self.login.getToken = function () {
-        var url = URL_BASE + 'api-token-auth/';
+        var url = URL_BASE.replace('{0}/', '') + 'api-token-auth/';
         return url;
     };
-
+    /* Clinics' URLS */
+    self.clinicUrl.getGeneral = () => URL_BASE.replace('{0}', 'es') + 'clinics/';
     /* URL to Patient */
 
     self.register.patients = function () {

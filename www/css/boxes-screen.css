@@ -1,5 +1,6 @@
 .sweat-box-gray {
-  background: linear-gradient(rgba(19, 88, 94, 0.29), rgba(30, 17, 17, 0.72));
+  /*background: linear-gradient(rgba(19, 88, 94, 0.29), rgba(30, 17, 17, 0.72));*/
+  background: linear-gradient(rgba(19, 88, 94, 0.29), rgb(60, 177, 186));
   width: 80%;
   max-width: 266px;
   height: 202px;
@@ -12,7 +13,7 @@
   align-content: center;
 }
 @media (max-width: 720px) {
-  .sweat-box-gray {
+  .sweat-box-gray.box-responsive {
     padding: 0px;
     width: 95%;
     height: 100%;
@@ -20,14 +21,14 @@
   }
 }
 @media (max-width: 450px) {
-  .sweat-box-gray {
+  .sweat-box-gray.box-responsive {
     padding: 0px;
     width: 100%;
     font-size: 85%;
   }
 }
 @media (max-width: 280px) {
-  .sweat-box-gray {
+  .sweat-box-gray.box-responsive {
     padding: 0px;
     width: 112%;
     margin: -10% auto;
