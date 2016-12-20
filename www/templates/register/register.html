@@ -1,51 +1,69 @@
 <ion-view style="" title="MedicalBox" class=" " id="">
-  <ion-content class="has-header text-center sweat-doctor-backgorund" padding="true" >
-    <div class="row">
-        <div class="col col-80 col-offset-10">
-	<div class="medical-box" translate="REGISTER.title"></div>
-	<br />
-            <div class="list">
+  <ion-header-bar>
+      <div class="buttons">
+        <button class="button button-icon icon ion-android-arrow-back" ui-sref="index"></button>
+      </div>
+      <h1 class="title" translate="REGISTER.title"></h1>
+    </ion-header-bar>
+  <ion-content class="has-header" padding="true" ng-controller="RegisterCtrl">
+    <div class="col">
+        <div class="form-transparent padding">
+            <div class="registo">
                 <br>
-		  <label class="item item-input">
-		    <span class="input-label" translate="REGISTER.first_name"></span>
-		    <input type="text" placeholder="{{ 'REGISTER.first_name_place' | translate }}" ng-model="data.first_name">
-		  </label>
-		  <label class="item item-input">
-		    <span class="input-label" translate="REGISTER.last_name"></span>
-		    <input type="text" placeholder="{{ 'REGISTER.last_name_place' | translate }}" ng-model="data.last_name">
-		  </label>
-		  <label class="item item-input" ng-show="data.user_type == 'Doctor'">
-		    <span class="input-label" translate="REGISTER.profession"></span>
-		    <input type="text" placeholder="{{ 'REGISTER.profession' | translate }}" ng-model="data.profession">
-		  </label> 
-		  <label class="item item-input">
-		    <span class="input-label" translate="REGISTER.email"></span>
-		    <input type="text" placeholder="{{ 'REGISTER.email_place' | translate }}" ng-model="data.email">
-		  </label>
-		  <label class="item item-input">
-		    <span class="input-label" translate="REGISTER.pass"></span>
-		    <input type="password" placeholder="{{ 'REGISTER.pass_place' | translate }}" ng-model="data.password">
-		  </label>
-		  <label class="item item-input">
-		    <span class="input-label" translate="REGISTER.pass2"></span>
-		    <input type="password" placeholder="{{ 'REGISTER.pass2_place' | translate }}" ng-model="data.password_repeat">
-		  </label> 
-		  <label class="item item-input">
-		    <span class="input-label" translate="REGISTER.phone_number"></span>
-		    <input type="text" placeholder="{{ 'REGISTER.phone_number_place' | translate }}" ng-model="data.phone_number">
-		  </label> 
-		  <label class="item item-input" ng-hide="data.user_type == 'Doctor'">
-		    <span class="input-label" translate="REGISTER.address"></span>
-		    <input type="text" placeholder="{{ 'REGISTER.address_place' | translate }}" ng-model="data.address">
-		  </label>    
-		  <label class="item item-input">
-		    <span class="input-label" translate="REGISTER.user_type"></span>
+                <label class="padding colorLabel" translate="REGISTER.first_name"></label>
+                <div class="item-input-inset">
+                     <label class="item-input-wrapper box_redondo">
+                      <input type="text" placeholder="{{ 'REGISTER.first_name_place' | translate }}" ng-model="data.first_name">
+                     </label>
+                </div>
+                <label class="padding colorLabel" translate="REGISTER.last_name"></label>
+                <div class="item-input-inset">
+                     <label class="item-input-wrapper box_redondo">
+                      <input type="text" placeholder="{{ 'REGISTER.last_name_place' | translate }}" ng-model="data.last_name">
+                     </label>
+                </div>     
+                <label class="padding colorLabel" translate="REGISTER.email"></label>
+                <div class="item-input-inset">
+                    <label class="item-input-wrapper box_redondo">
+                      <input type="text" placeholder="{{ 'REGISTER.email_place' | translate }}" ng-model="data.email">
+                    </label>
+                </div>
+                <label class="padding colorLabel" translate="REGISTER.pass"></label>
+                <div class="item-input-inset">
+                    <label class="item-input-wrapper box_redondo">
+                      <input type="password" placeholder="{{ 'REGISTER.pass_place' | translate }}" ng-model="data.password">
+                    </label>
+                </div>
+                <label class="padding colorLabel" translate="REGISTER.pass2"></label>
+                <div class="item-input-inset">
+                    <label class="item-input-wrapper box_redondo">
+                      <input type="password" placeholder="{{ 'REGISTER.pass2_place' | translate }}" ng-model="data.password_repeat">
+                    </label>
+                </div>    
+                <label class="padding colorLabel" translate="REGISTER.phone_number"></label>
+                <div class="item-input-inset">
+                    <label class="item-input-wrapper box_redondo">
+                      <input type="text" placeholder="{{ 'REGISTER.phone_number_place' | translate }}" ng-model="data.phone_number">
+                    </label>
+                </div> 
+                <!-- 
+                <label class="padding colorLabel" translate="REGISTER.address"></label>
+                <div class="item-input-inset">
+                    <label class="item-input-wrapper box_redondo">
+                      <input type="text" placeholder="{{ 'REGISTER.address_place' | translate }}" ng-model="data.address">
+                    </label>
+                </div>  
+                -->   
+                <label class="padding colorLabel" translate="REGISTER.user_type"></label>
+                <div class="item-input-inset">
+                    <label class="item-input-wrapper box_redondo">
 			<ion-radio ng-model="data.user_type" ng-value="'Doctor'">{{ 'REGISTER.doctor' | translate }}</ion-radio>
 			<ion-radio ng-model="data.user_type" ng-value="'Patient'">{{ 'REGISTER.patient' | translate }}</ion-radio>
-		  </label> 
+                    </label>
+                </div>  
                 <div class="col col-80 col-offset-10">
                     <div class="item-input-inset">
-                        <button class="button button-block button-calm normal-text-button boton_redondo" ng-click="send()">
+                        <button class="button button-block button-calm normal-text-button boton_redondo" ng-click="onSend()">
                             Registrarse
                         </button>
                    </div>

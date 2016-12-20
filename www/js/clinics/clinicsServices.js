@@ -46,6 +46,33 @@ function ClinicServices($http, $q,constants, localStorageService) {
     }
     return promise;
   }  // End onCreate
+
+  function onFindClinic(id){
+
+    var deferred = $q.defer();
+    var promise = deferred.promise;
+    var url = constants.clinic.find(id);
+    
+    $http.get(url).then(function(response){
+      if (response.data.token)
+        deferred.resolve(response.data);
+      else
+        deferred.reject(response.data);
+    }, 
+    function(error){
+      deferred.reject(error);
+    })
+    
+    promise.success = function(fn) {
+      promise.then(fn);
+      return promise;
+    }
+    promise.error = function(fn) {
+      promise.then(null, fn);
+      return promise;
+    }
+   return promise;
+  }
   
 }
 })()

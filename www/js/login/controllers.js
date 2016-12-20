@@ -31,15 +31,19 @@ angular.module('medicalbox.Controllers').controller('LoginCtrl', LoginCtrl);
         .success(function(data) {
           $ionicLoading.hide();
           if(data.token)
-          {
-            console.log(data);
+          {            
+            localStorageService.set('access_token', data.token);
             localStorageService.set('user_data', data);
-            if (data.doctor && data.patient)
-                $state.go('dashboard');
-            else if (data.doctor)
-                $state.go('doctors.doctor');
-            else if (data.patient)
-                $state.go('doctors.patient');
+            if(data.doctor == null){
+              $state.go('patient');
+            }
+            else if(data.patient == null){
+              $state.go('doctor');
+                
+            }
+            else{
+              $state.go('dashboad');
+            }
           }
           else{
             $ionicLoading.hide();

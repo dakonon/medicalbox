@@ -29,24 +29,27 @@
     <!--::::::::::::::::::::::LIBRARIES:::::::::::::::::::::::::-->
     <script src="lib/angular/angular-local-storage.min.js"></script>
     <!--:::::::::::::::::::::MODELS:::::::::::::::::::::::-->
-    <script src="js/doctors/models.js"></script>
-    <script src="js/register/services.js"></script>
+    <script src="js/doctors/models.js"></script>    
     <!--::::::::::::::::::::::SERVICES:::::::::::::::::::::::::-->
     <script src="js/login/loginServices.js"></script>
+    <script src="js/register/services.js"></script>
+    <!--<script src="js/doctors/doctorServices.js"></script>-->
     <script src="js/clinics/clinicsServices.js"></script>
     <!--:::::::::::::::::::::CONTROLLERS:::::::::::::::::::::::-->
     <script src="js/login/controllers.js"></script>
     <script src="js/login/dashboadController.js"></script>
-    <script src="js/doctors/clinicCreateControllers.js"></script>
+    <script src="js/clinics/clinicCreateControllers.js"></script>
+    <script src="js/clinics/findClinicControllers.js"></script>
     <script src="js/map/mapController.js"></script>
     <script src="js/register/controllers.js"></script>
+    <script src="js/settings/controllers.js"></script>
     <!--<script src="js/login/loginControllers.js"></script>-->
     
 
 
 
     <!-- EXTRA -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9jBmY8pNwixFojEoiXDHG__nWGVI6AVw"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOrFIXUusVQBIXw32d6m3unm_rW4tWZ84&libraries=places"></script>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="/img/favicon.ico">
@@ -57,10 +60,7 @@
     <!--
       The nav bar that will be updated as we navigate between views.
     -->
-    <ion-nav-bar class="bar-stable">
-      <ion-nav-back-button>
-      </ion-nav-back-button>
-    </ion-nav-bar>
+
 
     <!--
       The views will be rendered in the <ion-nav-view> directive below

@@ -29,23 +29,23 @@ angular.module('medicalbox')
 
 .config(config);
 
- config.$inject = ['$stateProvider', '$urlRouterProvider', '$translateProvider', '$ionicConfigProvider'];
+ config.$inject = ['$stateProvider', '$urlRouterProvider', '$translateProvider','$ionicConfigProvider'];
 
-    function config($stateProvider, $urlRouterProvider, $translateProvider, $ionicConfigProvider) {
-        $ionicConfigProvider.navBar.alignTitle("center");
-        $ionicConfigProvider.tabs.position("bottom");
+    function config($stateProvider, $urlRouterProvider, $translateProvider,$ionicConfigProvider) {
+      $ionicConfigProvider.tabs.position("bottom");
+      $ionicConfigProvider.navBar.alignTitle("center");
         $stateProvider
 
-        .state('doctors', {
-          url: '/doctors',
+        .state('tabDoctor', {
+          url: '/tabDoctor',
           abstract: true,
-          templateUrl: 'templates/doctor-tabs.html'
+          templateUrl: 'templates/tabDoctor.html'
         })
 
-        .state('tabUser', {
-          url: '/tabUser',
+        .state('tabPatient', {
+          url: '/tabPatient',
           abstract: true,
-          templateUrl: 'templates/tabsUser.html'
+          templateUrl: 'templates/tabPatient.html'
         })
 
         .state('index', {
@@ -62,15 +62,12 @@ angular.module('medicalbox')
           templateUrl: 'templates/login/dashboad.html',
         })
         /* DOCTORS URLS */
-        .state('doctors.doctor', {
+        .state('doctor', {
           url: '/doctor',
-           views: {
-             'doctor': {
-                templateUrl: 'templates/doctors/index.html'
-             }
-           }
+          templateUrl: 'templates/doctors/index.html'
         })
-        .state('doctors.map', {
+
+        .state('tabDoctor.map', {
           url: '/map',
            views: {
              'map': {
@@ -78,23 +75,24 @@ angular.module('medicalbox')
              }
            }
         })
-        .state('doctors.my-clinics', {
-          url: '/my-clinics',
+
+        .state('tabDoctor.doctor-clinics', {
+          url: '/doctor/my-clinics',
            views: {
             'doctor-clinics': {
               templateUrl: 'templates/doctors/my-clinics.html'
              }
            }
         })
-        .state('doctors.doctor-clinics-create', {
-          url: '/my-clinics/create',
+        .state('tabDoctor.doctor-clinics-create', {
+          url: '/doctor/my-clinics/create',          
            views: {
              'doctor-clinics-create': {
                 templateUrl: 'templates/doctors/my-clinics-create.html'
              }
            }
         })
-        .state('doctors.doctor-clinics-edit', {
+        .state('tabDoctor.doctor-clinics-edit', {
           url: '/clinic/edit?id&created_by&name&zip_code&address&latitude&longitude&phone_one&phone_two&country&city&doctors',
           views: {
             'doctor-clinics-create': {
@@ -102,10 +100,23 @@ angular.module('medicalbox')
             }
           }
         })
-
-        /* END DOCTORS URLS*/
-        $urlRouterProvider.otherwise('/index');
         
+        /* END DOCTORS URLS*/
+         /* PATIENTS URLS */
+         .state('patient', {
+          url: '/patient',
+          templateUrl: 'templates/patient/index.html'
+        })
+        .state('tabPatient.patient-clinics', {
+          url: '/patient/find-clinics',
+           views: {
+            'patient-clinics': {
+          templateUrl: 'templates/patient/find-clinics.html'
+             }
+           }
+        })
+         /* END PATIENTS URLS*/
+        $urlRouterProvider.otherwise('/index')
 
         $translateProvider.useStaticFilesLoader({
             prefix: 'js/locales/locale-',
