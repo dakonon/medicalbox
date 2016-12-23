@@ -103,7 +103,7 @@ angular.module('medicalbox.Controllers').controller('ClinicCreateCrtl', ClinicCr
               city: JSON.stringify(clinic.city),
               doctors: JSON.stringify(clinic.doctors)
             }
-            $state.go('tabDoctor.doctor-clinics-edit', params);
+            $state.go('doctors.doctor-clinics-edit', params);
           }
           else {
             $scope.error = data.data;
