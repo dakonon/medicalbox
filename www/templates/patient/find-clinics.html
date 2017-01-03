@@ -2,20 +2,27 @@
     *   Created by: @pdonaire1                *
     *   Ing. Pablo Alejandro Gonzalez Donaire *
     *******************************************-->
-<ion-view style="" title="MedicalBox" class=" " id="" ng-controller="findClinicCrtl">
-  <ion-content class="has-header text-center sweat-doctor-backgorund" padding="true">
-    <br />
+<ion-view style="" title="MedicalBox" class=" " id="">
+  <ion-content class="has-header text-center sweat-doctor-backgorund" ng-controller="findClinicCrtl">
+    <ion-refresher
+         pulling-text="Pull to refresh..."
+         on-refresh="doRefresh()">
+    </ion-refresher>
     <div class="row">
       <div class="col col-80 col-offset-10">
         <div class="list">
-          <a class="item item-thumbnail-left" href="#" ng-repeat="i in [1,2,3]">
+          <a class="item item-thumbnail-left" ui-sref="tab.clinic"ng-repeat="clinic in data">
             <img src="/img/icons/clinic.png">
-            <h2>My clinic {{i}} - Clinica Santa Fé</h2>
-            <p>Santa Ana Norte, Pasaje Táchira</p>
+            <h2>{{clinic.id}} - {{clinic.name}} </h2>
+            <p>{{clinic.address}}</p>
           </a>
         </div>
         
       </div>
-    </div>          
+    </div>
+    <ion-infinite-scroll ng-if="canShowMore"
+         on-infinite="loadMore()"
+         distance="1%">
+    </ion-infinite-scroll>          
   </ion-content>
 </ion-view>

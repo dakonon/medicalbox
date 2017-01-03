@@ -16,23 +16,23 @@ function clinicService($http, $q,constants) {
 	self.onCreateClinic = onCreateClinic;
   self.onFindClinic = onFindClinic;
   
-    function onCreateClinic(name,country_id,city_id,address,phone,access_token){
+    function onCreateClinic(name,country_id,city_id,address,access_token){
   
       var deferred = $q.defer();
       var promise = deferred.promise;
-      var url = constants.create.clinic();
+      var url = constants.clinic.create();
       
       var params = {name: name,
                     country_id: country_id,
                     city_id: city_id,
-                    address: address,
-                    phone: phone
+                    address: address                   
                   }
-      $http.post(url, params, {headers: {"Authorization": access_token}}).then(function(response){
-        if (response.data.token)
-          deferred.resolve(response.data);
+      console.log(params);
+      $http.post(url, params, {headers: {"Authorization": "Token "+access_token}}).then(function(response){
+        if (data)
+          deferred.resolve(data);
         else
-          deferred.reject(response.data);
+          deferred.reject(data);
       }, 
       function(error){
         deferred.reject(error);
@@ -49,14 +49,14 @@ function clinicService($http, $q,constants) {
      return promise;
     }
 
-    function onFindClinic(id){
+    function onFindClinic(limit,offset){
   
       var deferred = $q.defer();
       var promise = deferred.promise;
-      var url = constants.clinic.find(id);
+      var url = constants.clinic.find(limit,offset);
       
       $http.get(url).then(function(response){
-        if (response.data.token)
+        if (response.data.results)
           deferred.resolve(response.data);
         else
           deferred.reject(response.data);

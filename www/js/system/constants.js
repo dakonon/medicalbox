@@ -7,8 +7,7 @@ function constantsService() {
     var self = this;
     var URL_BASE='https://sandbox-medicalbox-api.herokuapp.com/{0}/api/';
     self.login = {};
-    self.register = {};
-    self.create = {};
+    self.register = {};    
     self.clinic = {};
 
   
@@ -33,15 +32,19 @@ function constantsService() {
         return url;
     };
 
-    self.create.clinic = function () {
+    self.clinic.create = function () {
         var url = URL_BASE.replace("{0}","es") + 'clinics/';
         return url;
     };
 
-    self.clinic.find = function (id) {
+    self.clinic.find = function (limit,offset) {
         var url = URL_BASE.replace("{0}","es") + 'clinics/';
-        if (id) {
-            url += "/{0}".replace("{0}", id)
+
+        if (limit) {
+            url += "?limit={0}".replace("{0}", limit)
+        }
+        if (offset) {
+            url += "&offset={0}".replace("{0}", offset)
         }
         return url;
     };
