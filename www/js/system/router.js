@@ -36,37 +36,38 @@ angular.module('medicalbox')
       $ionicConfigProvider.navBar.alignTitle("center");
         $stateProvider
 
-        .state('tabDoctor', {
-          url: '/tabDoctor',
+        .state('doctors', {
+          url: '/doctors',
           abstract: true,
           templateUrl: 'templates/tabDoctor.html'
         })
 
-        .state('tabPatient', {
-          url: '/tabPatient',
+        .state('patients', {
+          url: '/patients',
           abstract: true,
           templateUrl: 'templates/tabPatient.html'
         })
 
         .state('index', {
           url: '/index',
-          templateUrl: 'templates/index.html'          
+          templateUrl: 'templates/index.html'
         })
         .state('register', {
           url: '/register',
           controller: 'RegisterCtrl', 
-          templateUrl: "templates/register/register.html"          
+          templateUrl: "templates/register/register.html"
         })
-        .state('dashboad', {
-          url: '/dashboad',
-          templateUrl: 'templates/login/dashboad.html',
+        .state('dashboard', {
+          url: '/dashboard',
+          templateUrl: 'templates/login/dashboard.html',
         })
         /* DOCTORS URLS */
-        .state('doctor', {
-          url: '/doctor',
+        .state('doctors-menu', {
+          url: '/doctors-menu',
           templateUrl: 'templates/doctors/index.html'
         })
-        .state('tabDoctor.map', {
+
+        .state('doctors.map', {
           url: '/map',
            views: {
              'map': {
@@ -74,35 +75,45 @@ angular.module('medicalbox')
              }
            }
         })
-        .state('tabDoctor.doctor-clinics', {
-          url: '/doctor/my-clinics',
-           views: {
-            'doctor-clinics': {
-          templateUrl: 'templates/doctors/my-clinics.html'
-             }
-           }
+
+        .state('doctors.my-clinics', {
+          url: '/my-clinics',
+          views: {
+            'map': {
+              templateUrl: 'templates/doctors/my-clinics.html'
+            }
+          }
         })
-        .state('tabDoctor.doctor-clinics-create', {
-          url: '/doctor/my-clinics/create',          
-           views: {
-             'doctor-clinics-create': {
-                templateUrl: 'templates/doctors/my-clinics-create.html'
-             }
-           }
+        .state('doctors.doctor-clinics-create', {
+          url: '/my-clinics/create',          
+          views: {
+            'map': {
+              templateUrl: 'templates/doctors/my-clinics-create.html'
+            }
+          }
         })
+        .state('doctors.doctor-clinics-edit', {
+          url: '/clinic/edit?id&created_by&name&zip_code&address&latitude&longitude&phone_one&phone_two&country&city&doctors',
+          views: {
+            'map': {
+              templateUrl: 'templates/doctors/my-clinics-create.html'
+            }
+          }
+        })
+        
         /* END DOCTORS URLS*/
          /* PATIENTS URLS */
-         .state('patient', {
+        .state('patient', {
           url: '/patient',
           templateUrl: 'templates/patient/index.html'
         })
-        .state('tabPatient.patient-clinics', {
+        .state('patients.patient-clinics', {
           url: '/patient/find-clinics',
-           views: {
+          views: {
             'patient-clinics': {
-          templateUrl: 'templates/patient/find-clinics.html'
-             }
-           }
+              templateUrl: 'templates/patient/find-clinics.html'
+            }
+          }
         })
          /* END PATIENTS URLS*/
         $urlRouterProvider.otherwise('/index')

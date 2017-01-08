@@ -4,57 +4,71 @@
     *******************************************-->
 
 <ion-view style="" title="MedicalBox" class=" " id="" ng-controller="ClinicCreateCrtl">
-  <ion-content class="has-header text-center sweat-doctor-backgorund" padding="true">
+  <ion-content class="has-header text-center sweat-doctor-background-index" padding="true">
     <br />
     <div class="row">
       <div class="col col-80 col-offset-10">
-        <img src="/img/icons/pharmacy.png" class="icon-button">
-        <div class="medical-box" translate="INDEX.BUTTONS.CREATE_CLINIC"></div>
+        <div class="sweat-box-gray">
+          <img src="/img/icons/pharmacy.png" class="icon-button">
+          <div class="" translate="INDEX.BUTTONS.CREATE_CLINIC"></div>
+        </div>
         <br />
         <div class="list">
           <label class="item item-input">
             <span class="input-label" translate="INDEX.INPUT.NAME"></span>
-            <input type="text" placeholder="{{ 'INDEX.INPUT.NAME' | translate }}" ng-model="data.name">
-          </label>
-          <label class="item item-input">
-            <span class="input-label" translate="INDEX.INPUT.CITY"></span>
-            <input type="text" placeholder="{{ 'INDEX.INPUT.CITY' | translate }}" ng-model="data.city_id">
+            <input type="text" placeholder="{{ 'INDEX.INPUT.NAME' | translate }}"
+              ng-model="createForm.name">
           </label>
           <label class="item item-input">
             <span class="input-label" translate="INDEX.INPUT.COUNTRY"></span>
-            <input type="text" placeholder="{{ 'INDEX.INPUT.COUNTRY' | translate }}" ng-model="data.country_id">
-          </label>          
+            <input type="text" placeholder="{{ 'INDEX.INPUT.COUNTRY' | translate }}"
+              ng-model="createForm.country_id">
+          </label>
+          <label class="item item-input">
+            <span class="input-label" translate="INDEX.INPUT.CITY"></span>
+            <input type="text" placeholder="{{ 'INDEX.INPUT.CITY' | translate }}"
+              ng-model="createForm.city_id">
+          </label>
           <label class="item item-input">
             <span class="input-label" translate="INDEX.INPUT.ADDRESS"></span>
-            <input type="text" placeholder="{{ 'INDEX.INPUT.ADDRESS' | translate }}" ng-model="data.address">
+            <input type="text" placeholder="{{ 'INDEX.INPUT.ADDRESS' | translate }}"
+              ng-model="createForm.address">
           </label>
-          <!--
+
           <label class="item item-input">
-            <span class="input-label not-required" translate="INDEX.INPUT.ZIP_CODE"></span>
-            <input type="password" placeholder="{{ 'INDEX.INPUT.ZIP_CODE' | translate }}">
-          </label>
-          <label class="item item-input">
-            <span class="input-label not-required" translate="INDEX.INPUT.LATITUDE"></span>
-            <input type="password" placeholder="{{ 'INDEX.INPUT.LATITUDE' | translate }}">
-          </label>
-          <label class="item item-input">
-            <span class="input-label not-required" translate="INDEX.INPUT.LONGITUDE"></span>
-            <input type="password" placeholder="{{ 'INDEX.INPUT.LONGITUDE' | translate }}">
+            <span class="input-label not-required" translate="INDEX.INPUT.PHONE_ONE"></span>
+            <input type="text" placeholder="{{ 'INDEX.INPUT.PHONE_ONE' | translate }}"
+              ng-model="createForm.phone_one">
           </label>
           <label class="item item-input">
             <span class="input-label not-required" translate="INDEX.INPUT.PHONE_TWO"></span>
-            <input type="password" placeholder="{{ 'INDEX.INPUT.PHONE_TWO' | translate }}" >
+            <input type="text" placeholder="{{ 'INDEX.INPUT.PHONE_TWO' | translate }}"
+              ng-model="createForm.phone_two">
           </label>
-          -->
           <label class="item item-input">
-            <span class="input-label not-required" translate="INDEX.INPUT.PHONE_ONE"></span>
-            <input type="tel" placeholder="{{ 'INDEX.INPUT.PHONE_ONE' | translate }}" ng-model="data.phone">
-          </label>          
+            <span class="input-label not-required" translate="INDEX.INPUT.ZIP_CODE"></span>
+            <input type="text" placeholder="{{ 'INDEX.INPUT.ZIP_CODE' | translate }}"
+              ng-model="createForm.zip_code">
+          </label>
+          <label class="item item-input">
+            <span class="input-label not-required" translate="INDEX.INPUT.LATITUDE"></span>
+            <input type="text" placeholder="{{ 'INDEX.INPUT.LATITUDE' | translate }}"
+              ng-model="createForm.latitude">
+          </label>
+          <label class="item item-input">
+            <span class="input-label not-required" translate="INDEX.INPUT.LONGITUDE"></span>
+            <input type="text" placeholder="{{ 'INDEX.INPUT.LONGITUDE' | translate }}"
+              ng-model="createForm.longitude">
+          </label>
         </div>
-        <button ng-click="onCreate()" class="button button-block button-balanced">
+        <button class="button button-block button-balanced" ng-click="onCreate()">
           <span translate="INDEX.BUTTONS.CREATE"></span>
         </button>
       </div>
-    </div>       
+    </div>
+
+
+           
   </ion-content>
+</ion-view>
 </ion-view>

@@ -19,7 +19,7 @@
 			console.log(data);
 			$ionicPopup.alert({
 			  title: 'Error al registrarse!',
-			  template: data
+			  template: data.data.error
 			});
 			})			
 		}

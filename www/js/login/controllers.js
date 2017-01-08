@@ -17,13 +17,11 @@ angular.module('medicalbox.Controllers').controller('LoginCtrl', LoginCtrl);
         password: ""
       }
       $scope.cleanErrors = function (){
-        console.log("cleanErrors");
         $scope.invalidUser = false;
         $scope.invalidForm = false;
       }
     	
       function onLogin(){
-        
         if (!$scope.login.username || !$scope.login.password){
           $scope.invalidForm = true; 
           return false;
@@ -31,6 +29,7 @@ angular.module('medicalbox.Controllers').controller('LoginCtrl', LoginCtrl);
         $ionicLoading.show({});
         AuthService.onLogin($scope.login.username, $scope.login.password)
         .success(function(data) {
+          console.log(data)
           $ionicLoading.hide();
           if(data.token)
           {            
@@ -44,9 +43,8 @@ angular.module('medicalbox.Controllers').controller('LoginCtrl', LoginCtrl);
                 
             }
             else{
-              $state.go('dashboad');
+              $state.go('dashboard');
             }
-            
           }
           else{
             $ionicLoading.hide();

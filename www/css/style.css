@@ -106,6 +106,9 @@ hr.hyphen{
 .sweat-doctor-background {
   background: #F7FDFC;
 }
+.sweat-doctor-background-index {
+  background: linear-gradient(rgba(89, 160, 166, 0.12), rgba(237, 196, 231, 0.2)), url('/img/background.png');
+}
 .patient-backgorund {
   background: #fffdca !important;
 }
