@@ -6,29 +6,27 @@
     'use strict';
 angular.module('medicalbox.Services')
 
-.service('ClinicServices', ClinicServices);
+.service('myClinicServices', myClinicServices);
 
-ClinicServices.$inject = ['$http', '$q', 'constants', 'localStorageService']
+myClinicServices.$inject = ['$http', '$q', 'constants']
 
-function ClinicServices($http, $q,constants, localStorageService) {
-  var userData = localStorageService.get('user_data');
-  this.onCreate = onCreate;
-  this.onFindClinic = onFindClinic;
+function myClinicServices($http, $q,constants) {  
   
-  function onCreate(params){
+  this.onFindAllMyClinic = onFindAllMyClinic;
+  this.onFindMyClinicDetail = onFindMyClinicDetail;
+    
+  function onFindAllMyClinic(token,limit,offset){
     var deferred = $q.defer();
     var promise = deferred.promise;
-    var url = constants.clinicUrl.getGeneral();
+    var url = constants.clinic.allMyClinic(limit,offset);
     var req = {
-      method: 'POST',
+      method: 'GET',
       url: url,
       headers: {
         // 'Content-Type': 'application/json',
-        'Authorization': 'Token {0}'.replace('{0}', userData.token)
-      },
-      data: params
-    }
-    console.log(req);
+        'Authorization': 'Token {0}'.replace('{0}', token)
+      }
+    }    
     $http(req)
       .then((response) => {
         deferred.resolve(response);
@@ -48,14 +46,18 @@ function ClinicServices($http, $q,constants, localStorageService) {
     return promise;
   }  // End onCreate
 
-  function onFindClinic(limit,offset){    
+  function onFindMyClinicDetail(token,id){
     var deferred = $q.defer();
     var promise = deferred.promise;
-    var url = constants.clinic.find(limit,offset);
+    var url = constants.clinic.myClinicDetail(id);
     var req = {
       method: 'GET',
-      url: url
-    }
+      url: url,
+      headers: {
+        // 'Content-Type': 'application/json',
+        'Authorization': 'Token {0}'.replace('{0}', token)
+      }
+    }    
     $http(req)
       .then((response) => {
         deferred.resolve(response);

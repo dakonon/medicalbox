@@ -6,18 +6,18 @@ navigation history that also transitions its views in and out.
 <ion-tabs class="tabs-icon-top tabs-color-active-positive" ng-controller="settingsController">
 
   <!-- Dashboard Tab -->
-  <ion-tab icon-off="ion-ios-home-outline" icon-on="ion-ios-home-outline" href="#/doctor">
-    <ion-nav-view name="doctor"></ion-nav-view>
+  <ion-tab icon-off="ion-ios-home-outline" icon-on="ion-ios-home-outline" ui-sref="doctors-menu">
+    <ion-nav-view name="doctors-menu"></ion-nav-view>
   </ion-tab>
 
   <!-- Chats Tab -->
   <ion-tab icon-off="ion-ios-medkit-outline" icon-on="ion-ios-medkit-outline" ui-sref="doctors.my-clinics">
-    <ion-nav-view name="doctors.my-clinics"></ion-nav-view>
+    <ion-nav-view name="my-clinics"></ion-nav-view>
   </ion-tab>
 
   <!-- Account Tab -->
-  <ion-tab icon-off="ion-android-add" icon-on="ion-android-add" href="#/tabDoctor/doctor/my-clinics/create">
-    <ion-nav-view name="doctors.doctor-clinics-create"></ion-nav-view>  
+  <ion-tab icon-off="ion-android-add" icon-on="ion-android-add" ui-sref="doctors.doctor-clinics-create">
+    <ion-nav-view name="clinics-create"></ion-nav-view>  
   </ion-tab>
   
   <ion-tab icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear-outline" ng-click="show()">       
@@ -26,5 +26,8 @@ navigation history that also transitions its views in and out.
     <!-- Aqui se agreganlas vistas que llevan tab pero que no se encuentran entre las 4 opciones de arriba -->
   <ion-tab hidden="true">
     <ion-nav-view name="map" overflow-scroll="true"></ion-nav-view>
+  </ion-tab> 
+  <ion-tab hidden="true">
+    <ion-nav-view name="clinicDetail" overflow-scroll="true"></ion-nav-view>
   </ion-tab> 
 </ion-tabs>

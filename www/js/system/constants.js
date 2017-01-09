@@ -43,6 +43,18 @@ function constantsService() {
     };
 
     self.clinic.find = function (limit,offset) {
+        var url = URL_BASE.replace("{0}","es") + 'clinics/find_clinic/';
+
+        if (limit) {
+            url += "?limit={0}".replace("{0}", limit)
+        }
+        if (offset) {
+            url += "&offset={0}".replace("{0}", offset)
+        }
+        return url;
+    };
+
+    self.clinic.allMyClinic = function (limit,offset) {
         var url = URL_BASE.replace("{0}","es") + 'clinics/';
 
         if (limit) {
@@ -51,6 +63,17 @@ function constantsService() {
         if (offset) {
             url += "&offset={0}".replace("{0}", offset)
         }
+
+        return url;
+    };
+
+    self.clinic.myClinicDetail = function (id) {
+        var url = URL_BASE.replace("{0}","es") + 'clinics/';
+
+        if (id) {
+            url += "{0}/".replace("{0}", id)
+        }
+
         return url;
     };
     

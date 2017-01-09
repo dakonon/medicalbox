@@ -1,0 +1,16 @@
+
+<ion-view title="MedicalBox">
+  <ion-content class="has-header text-center sweat-doctor-background-index" padding="true" ng-controller="ClinicDetailCrtl">
+    <div class="row">
+      <div class="col col-80 col-offset-10">
+        <div class="list list-medical">
+          <a class="item item-thumbnail-left" ui-sref="doctors.clinicDetail({id:dato.id})" >
+            <img src="/img/icons/clinic.png">
+            <h2>Nombre: {{data.name}}</h2>
+            <p>Telefono: {{data.phone_one}}</p>
+          </a>
+        </div>
+        
+      </div>
+    </div>  
+</ion-view>

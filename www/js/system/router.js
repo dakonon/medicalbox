@@ -33,7 +33,7 @@ angular.module('medicalbox')
 
     function config($stateProvider, $urlRouterProvider, $translateProvider,$ionicConfigProvider) {
       $ionicConfigProvider.tabs.position("bottom");
-      $ionicConfigProvider.navBar.alignTitle("center");
+      $ionicConfigProvider.navBar.alignTitle("center");      
         $stateProvider
 
         .state('doctors', {
@@ -79,15 +79,24 @@ angular.module('medicalbox')
         .state('doctors.my-clinics', {
           url: '/my-clinics',
           views: {
-            'map': {
+            'my-clinics': {
               templateUrl: 'templates/doctors/my-clinics.html'
+            }
+          }
+        })
+
+        .state('doctors.clinicDetail', {
+          url: '/clinicDetail?id',
+          views: {
+            'clinicDetail': {
+              templateUrl: 'templates/doctors/clinicDetail.html'
             }
           }
         })
         .state('doctors.doctor-clinics-create', {
           url: '/my-clinics/create',          
           views: {
-            'map': {
+            'clinics-create': {
               templateUrl: 'templates/doctors/my-clinics-create.html'
             }
           }
